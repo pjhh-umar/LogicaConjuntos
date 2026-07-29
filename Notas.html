@@ -1,0 +1,1042 @@
+
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="./main.js"></script>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="./style.css" />
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1],
+            id: "\\operatorname{id}",
+          },
+          tags: "ams", /* this part is for numbered equations */
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+    </script>
+
+    <script>
+  function toggleRespuestas(btn) {
+    var respuestas = btn.nextElementSibling;
+    if (respuestas.style.display === "none" || respuestas.style.display === "") {
+      respuestas.style.display = "block";
+      btn.textContent = "Ocultar";
+    } else {
+      respuestas.style.display = "none";
+      btn.textContent = "Mostrar Respuestas";
+    }
+  }
+</script>
+    
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+      /* body.title
+      {
+      counter-reset: temaCounter 1 subsectioncounter ;
+      } */
+      body.fondo-body{
+        counter-reset: temaCounter 1 sectionCounter;
+      }
+
+      /* h1.page-title
+      {
+      counter-reset: sectionCounter 0;
+      }  */
+
+      h1.tema-title
+          {
+          counter-reset: sectionCounter 0;
+          } 
+
+      h1.title
+      {
+      counter-reset: subsectionCounter;
+      /* counter-reset: subsectionCounter; */
+      }
+
+    </style>
+
+
+  
+    <!-- Top Menu  -->
+    
+      
+        <header class="main-header">
+        
+          <div class="logo_superior_umar">
+          <a href="https://www.umar.mx" target="_blank"><img src="./Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+          <div class="contenedor_titulo">
+          <div class="title">Notas Probabilidad II</div>
+          <div class="subtitle">Universidad del Mar, campus Huatulco</div>
+          <div class="subsubtitle">Licenciatura en Actuaría</div>
+          <!-- <div class="subsubtitle"><a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_administracion_turistica" target="_blank">Licenciatura en Administración Turística</a> </div>    -->
+          </div>
+          <div class="logo_superior_umar">
+            <a href="https://www.umar.mx" target="_blank"><img src="./Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+
+      
+        </header> 
+
+        <nav class="top-nav">
+          <ul>
+            <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Home.html"> Inicio  </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Informacion_General.html"> Información</a> </li>
+            <!-- <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Notas.html"> Notas  </a> </li> -->
+            <!-- <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Quizes.html"> Quizes  </a> </li>-->
+            <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Ejercicios.html">Ejercicios</a></li> 
+            <!-- <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Examenes.html"> Archivos </a> </li> -->
+            <!-- <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Links.html"> Links</a> </li> -->
+          </ul>
+          </nav>
+        <!-- 
+          <nav class="small-nav" align=right>
+            <button onclick="myFunction()">Claro/Obscuro 
+          </nav> 
+        -->
+
+      <!-- This part is for title in tab-->
+          
+      <title>Notas Procesos Estocásticos</title>
+      </head>  
+
+      <body class="fondo-body" ><h1 class="page-title"> Notas</h1>  
+
+<div class="nota-box">
+  <h1 class="title-practica">Definición</h1>
+
+  <p> Sea $(X_n)_{n\in\mathbb{N}_{0}}$ una cadena de Markov homogénea con espacio de estados $E$.  
+    Sea $C\subseteq E$ una colección no vacía de estados. Decimos que $C$ es
+    <strong>irreducible</strong> si para cualesquiera $i,j\in C$ se cumple que
+    $i\leftrightarrow j.$
+  </p>
+
+</div>
+
+<div class="teorema-box">
+  <h1 class="title-practica">Proposición </h1>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ una cadena de Markov homogénea con espacio de estados $E$. Si $C\subseteq E$ es una coleccion de estados cerrada e irreducible, entonces $C$ es 
+    una clase de comunicación.
+  </p>
+</div>
+
+
+<div class="nota-box">
+  <h1 class="title-practica">Observación</h1>
+  
+  <p>
+    La hipótesis de que $C$ sea irreducible garantiza que todos los estados de $C$ se comunican entre sí. 
+    Sin embargo, por sí sola esta condición no asegura que $C$ sea una clase de comunicación, ya que podría existir un estado fuera de $C$ que también se comunique con los estados de $C$.
+  </p>
+
+  <!-- <p>
+    La condición de que $C$ sea cerrada elimina esta posibilidad. En efecto, si $i\in C$ y $j\in E\setminus C$, entonces, como $C$ es cerrada, la cadena no puede pasar de $i$ a $j$. Por tanto,
+    $$
+    p_{ij}^{(n)}=0,
+    \qquad n\in\mathbb{N}.
+    $$
+  </p>
+
+  <p>
+    Así, ningún estado fuera de $C$ puede comunicarse con un estado de $C$, pues para que $i$ y $j$ se comunicaran sería necesario que tanto
+    $$
+    i\to j
+    \qquad\text{como}\qquad
+    j\to i
+    $$
+    se cumplieran. La primera relación es imposible cuando $i\in C$ y $j\in E\setminus C$.
+  </p>
+
+  <p>
+    Por lo tanto, la colección $C$ no sólo es irreducible, sino que además coincide exactamente con una clase de equivalencia bajo la relación de comunicación. En consecuencia, $C$ es una clase de comunicación.
+  </p> -->
+
+</div>
+
+<div class="definicion-box">
+  <h1 class="title-practica">Definición</h1>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ una cadena de Markov homogénea con espacio de estados $E$. Sean $i,j\in E$. 
+    Cuando la cadena se considera con condición inicial $X_0=i$, se define el 
+    <strong>número de visitas al estado $j$ hasta el tiempo $n$</strong> como la variable aleatoria
+    $$
+    N_{ij}(n)
+    =
+    \sum_{k=1}^{n}\mathbf{1}_{\{X_k=j\}},
+    \qquad n\in\mathbb{N}.
+    $$
+  </p>
+
+  <p>
+    La variable $N_{ij}(n)$ cuenta cuántas veces la cadena visita el estado $j$ durante los tiempos
+    $1,2,\ldots,n$, partiendo del estado inicial $i$.
+  </p>
+
+</div>
+
+<div class="definicion-box">
+  <h1 class="title-practica">Definición</h1>
+  <p>  Sea $(X_n)_{n\in\mathbb{N}_{0}}$ una cadena de Markov homogénea con espacio de estados $E$. Sean $i,j\in E$. 
+    Cuando la cadena se considera con condición inicial $X_0=i$, se define el 
+    <strong>número total de visitas al estado $j$</strong>, partiendo de $i$, se define como
+    $$
+    N_{ij}
+    =
+    \sum_{k=1}^{\infty}\mathbf{1}_{\{X_k=j\}}.
+    $$
+  </p>
+</div>
+
+<div class="nota-box">
+  <h1 class="title-practica">Notación</h1>
+  <p>
+    En particular, cuando $i=j$, vamos se denota: $N_i(n):=N_{ii}(n)$ y $N_i:=N_{ii}$.
+  </p>
+
+</div>
+
+<div class="teorema-box">
+  <h1 class="title-practica">Proposición</h1>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ una cadena de Markov homogénea con espacio de estados $E$. 
+    Sean $i,j\in E$, se cumplen las siguientes afirmaciones.
+  </p>
+    <!-- Sean $i,j\in E$ y sea
+    $$
+    N_{ij}
+    =
+    \sum_{n=1}^{\infty}\mathbf{1}_{\{X_n=j\}}
+    $$
+    el número total de visitas al estado $j$, bajo la condición inicial $X_0=i$.
+  </p>
+
+  <p>
+    Denotemos por
+    $$
+    f_{ij}
+    =
+    \mathbb{P}(T_j<\infty\mid X_0=i),
+    \qquad
+    T_j=\inf\{n\in\mathbb{N}:X_n=j\},
+    $$
+    la probabilidad de visitar eventualmente el estado $j$ partiendo de $i$.
+  </p> -->
+
+
+  <ol>
+    <li>
+      Para todo $k\in\mathbb{N}_{0}$,
+      $$
+      \mathbb{P}(N_{ij}\geq k\mid X_0=i)
+      =
+      \begin{cases}
+      1, & \text{si } k=0,\\[4pt]
+      f_{ij}(f_{jj})^{k-1}, & \text{si } k\geq 1.
+      \end{cases}
+      $$
+    </li>
+
+    <li>
+      Para todo $k\in\mathbb{N}_{0}$,
+      $$
+      \mathbb{P}(N_{ij}=k\mid X_0=i)
+      =
+      \begin{cases}
+      1-f_{ij}, & \text{si } k=0,\\[4pt]
+      f_{ij}(f_{jj})^{k-1}(1-f_{jj}), & \text{si } k\geq 1.
+      \end{cases}
+      $$
+    </li>
+
+    <li>
+      La esperanza del número total de visitas satisface
+      $$
+      \mathbb{E}[N_{ij}\mid X_0=i]
+      =
+      \sum_{n=1}^{\infty}p_{ij}^{(n)}
+      =
+      \begin{cases}
+      0, & \text{si } f_{ij}=0,\\[6pt]
+      \displaystyle{\frac{f_{ij}}{1-f_{jj}}}, & \text{si } f_{ij}\neq 0 \text{ y } f_{jj}< 1,\\[12pt]
+      \infty, & \text{si } f_{ij}\neq 0 \text{ y } f_{jj}=1.
+      \end{cases}
+      $$
+    </li>
+
+    <li>
+      La probabilidad de que el número de visitas sea infinito está dada por
+      $$
+      \mathbb{P}(N_{ij}=\infty\mid X_0=i)
+      =
+      \begin{cases}
+      0, & \text{si } j \text{ es transitorio},\\[4pt]
+      f_{ij}, & \text{si } j \text{ es recurrente}.
+      \end{cases}
+      $$
+    </li>
+
+    <li>
+      La probabilidad de que el número de visitas sea finito está dada por
+      $$
+      \mathbb{P}(N_{ij}<\infty\mid X_0=i)
+      =
+      \begin{cases}
+      1, & \text{si } j \text{ es transitorio},\\[4pt]
+      1-f_{ij}, & \text{si } j \text{ es recurrente}.
+      \end{cases}
+      $$
+    </li>
+  </ol>
+
+</div>
+
+<div class="teorema-box">
+  <h1 class="title-practica">Proposición</h1>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ una cadena de Markov homogénea con espacio de estados $E$.
+  La distribución del número total de visitas $N_{ij}$ al estado $j$ partiendo del estado $i$ está dada por
+  $$
+  \mathbb{P}_i(N_{ij}=m)
+  =
+  \begin{cases}
+  1, 
+  & \text{si } f_{ij}=0 \text{ y } m=0, \\[0.2cm]
+
+  1-f_{ij}, 
+  & \text{si } f_{ij}>0 \text{ y } m=0, \\[0.2cm]
+
+  f_{ij}, 
+  & \text{si } f_{ij}>0,\ f_{jj}=1 \text{ y } m=\infty, \\[0.2cm]
+
+  f_{ij}(1-f_{jj})f_{jj}^{\,m-1}, 
+  & \text{si } f_{ij}>0,\ f_{jj}< 1 \text{ y } m\in\mathbb{N}, \\[0.2cm]
+
+  0, 
+  & \text{en otro caso}.
+  \end{cases}
+  $$
+</p>
+
+
+</div>
+
+<div class="definicion-box">
+  <h1 class="title-practica">Definición</h1>
+
+  <p>
+    Sea $(\Omega,\mathcal{F},\mathbb{P})$ un espacio de probabilidad. Una sucesión
+    $(\mathcal{F}_n)_{n\in\mathbb{N}_{0}}$ de sub-$\sigma$-álgebras de $\mathcal{F}$ se llama
+    <strong>filtración</strong> si es creciente, es decir, si para todo
+    $n\in\mathbb{N}_{0}$ se cumple
+    $$\displaystyle{
+      \mathcal{F}_n\subseteq \mathcal{F}_{n+1}.
+    }$$
+  </p>
+
+  <p>
+    Equivalentemente,
+    $$\displaystyle{
+      \mathcal{F}_0\subseteq \mathcal{F}_1\subseteq \mathcal{F}_2\subseteq \cdots
+      \subseteq \mathcal{F}.
+    }$$
+  </p>
+
+  <p>
+    Cada $\mathcal{F}_n$ representa la información disponible hasta el tiempo $n$.
+    La condición $\mathcal{F}_n\subseteq \mathcal{F}_{n+1}$ expresa que la información
+    no disminuye con el paso del tiempo.
+  </p>
+</div>
+
+
+
+<div class="definicion-box">
+  <h1 class="title-practica">Definición</h1>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ un proceso estocástico definido sobre un espacio de
+    probabilidad $(\Omega,\mathcal{F},\mathbb{P})$. La <strong>filtración natural</strong>
+    asociada al proceso $(X_n)_{n\in\mathbb{N}_{0}}$ es la sucesión
+    $(\mathcal{F}_n)_{n\in\mathbb{N}_{0}}$ definida por
+    $$\displaystyle{
+      \mathcal{F}_n=\sigma(X_0,X_1,\ldots,X_n),
+      \qquad n\in\mathbb{N}_{0}.
+    }$$
+  </p>
+ <p>
+    Es decir, $\mathcal{F}_n$ es la $\sigma$-álgebra generada por las variables aleatorias
+    $X_0,X_1,\ldots,X_n$. Por tanto, representa toda la información disponible sobre el proceso
+    hasta el tiempo $n$.
+  </p>
+
+</div>
+<!-- 
+
+<div class="nota-box">
+  <h1 class="title-practica">Observación</h1>
+
+  <p>
+    La $\sigma$-álgebra $\mathcal{F}_n$ es generada por las variables aleatorias
+    $X_0,X_1,\ldots,X_n$. Intuitivamente, la filtración natural describe cómo se acumula la información conforme
+    evoluciona el proceso. En el tiempo $0$, la información disponible está dada por el valor
+    inicial $X_0$; en el tiempo $1$, se conocen $X_0$ y $X_1$; en general, en el tiempo $n$
+    se conoce la trayectoria observada
+    $$\displaystyle{
+      X_0,X_1,\ldots,X_n.
+    }$$
+  </p>
+
+  <p>
+    La palabra <em>natural</em> indica que esta filtración contiene exactamente la información
+    generada por el propio proceso hasta cada instante, sin agregar información externa. Por ello,
+    un evento pertenece a $\mathcal{F}_n$ si puede decidirse observando únicamente los valores
+    $X_0,X_1,\ldots,X_n$, sin utilizar información futura.
+  </p>
+</div>
+ -->
+
+
+
+
+<div class="definicion-box">
+  <h1 class="title-practica">Definición</h1>
+
+  <p> Sea $(\Omega,\mathcal{F},\mathbb{P})$ un espacio de probabilidad, $(X_n)_{n\in\mathbb{N}_{0}}$ un proceso estocástico definido sobre un espacio de
+    probabilidad $(\Omega,\mathcal{F},\mathbb{P})$ y $(\mathcal{F}_n)_{n\in\mathbb{N}_{0}}$ una filtración.
+    Una variable aleatoria
+    $$\displaystyle{
+      T:\Omega\longrightarrow \mathbb{N}_{0}\cup\{\infty\}
+    }$$
+    se llama <strong>tiempo de paro</strong> respecto de la filtración
+    $(\mathcal{F}_n)_{n\in\mathbb{N}_{0}}$ si, para cada $n\in\mathbb{N}_{0}$,
+    $$\displaystyle{
+      \{T\leq n\}\in\mathcal{F}_n.
+    }$$
+  </p>
+
+  <p>
+    En otras palabras, $T$ es un tiempo de paro si, para decidir si $T$ ya ocurrió antes o en el
+    tiempo $n$, basta conocer la información disponible hasta ese instante, es decir,
+    $X_0,X_1,\ldots,X_n$, sin utilizar información futura.
+  </p>
+</div>
+
+<!-- <div class="nota-box">
+  <h1 class="title-practica">Observación</h1>
+
+  <p>
+    La condición
+    $$\displaystyle{
+      \{T\leq n\}\in\mathcal{F}_n
+    }$$
+    expresa que $T$ no anticipa el futuro. Por esta razón, los tiempos de primera visita y de
+    primer regreso son ejemplos naturales de tiempos de paro.
+  </p>
+
+  <p>
+    Por ejemplo, si $A\subseteq E$ y
+    $$\displaystyle{
+      T_A=\min\{n\geq 1:X_n\in A\},
+    }$$
+    entonces $T_A$ es un tiempo de paro, pues para $n\geq 1$ se tiene
+    $$\displaystyle{
+      \{T_A\leq n\}
+      =
+      \bigcup_{m=1}^{n}\{X_m\in A\}\in\mathcal{F}_n.
+    }$$
+  </p>
+
+  <p>
+    En particular, si $A=\{j\}$, entonces
+    $$\displaystyle{
+      T_j=\min\{n\geq 1:X_n=j\}
+    }$$
+    es el tiempo de primera visita positiva al estado $j$, y también es un tiempo de paro.
+  </p>
+</div> -->
+
+
+
+<div class="teorema-box">
+  <h1 class="title-practica">Propiedad fuerte de Markov</h1>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ una cadena de Markov homogénea con espacio de estados $E$
+    y matriz de transición $P=(p_{ij})_{i,j\in E}$. Sea
+    $(\mathcal{F}_n)_{n\in\mathbb{N}_{0}}$ su filtración natural, donde
+    $$\displaystyle{
+      \mathcal{F}_n=\sigma(X_0,X_1,\ldots,X_n).
+    }$$
+    Si $T$ es un tiempo de paro respecto de esta filtración, entonces, sobre el evento
+    $\{T<\infty\}$, el proceso posterior al tiempo $T$,
+    $$\displaystyle{
+      (X_{T+n})_{n\in\mathbb{N}_{0}},
+    }$$
+    se comporta como una cadena de Markov que inicia en el estado $X_T$ y tiene la misma matriz
+    de transición $P$.
+  </p>
+
+  <p>
+    Para todo $m\in\mathbb{N}$ y cualesquiera estados
+    $j_1,\ldots,j_m\in E$, se cumple
+    $$\displaystyle{
+      \mathbb{P}_i
+      \left(
+        X_{T+1}=j_1,\ldots,X_{T+m}=j_m
+        \mid \mathcal{F}_T
+      \right)
+      =
+      \mathbb{P}_{X_T}
+      \left(
+        X_1=j_1,\ldots,X_m=j_m
+      \right),
+    }$$
+    sobre $\{T<\infty\}$.
+  </p>
+
+  <p>
+    Por tanto, condicionado a la información disponible hasta el tiempo de paro $T$, el futuro
+    de la cadena depende únicamente del estado actual $X_T$, y no de la trayectoria previa
+    $X_0,X_1,\ldots,X_{T-1}$.
+  </p>
+</div>
+
+
+<div class="nota-box">
+  <h1 class="title-practica">Observación</h1>
+
+  <p>
+    En la propiedad fuerte de Markov, la expresión
+    $$\displaystyle{
+      \mathbb{P}_i
+      \left(
+        X_{T+1}=j_1,\ldots,X_{T+m}=j_m
+        \mid \mathcal{F}_T
+      \right)
+    }$$
+    debe interpretarse como la probabilidad de que la cadena siga la trayectoria
+    $j_1,\ldots,j_m$ después del tiempo de paro $T$, suponiendo conocida toda la información
+    disponible hasta ese tiempo.
+  </p>
+
+  <p>
+    La $\sigma$-álgebra $\mathcal{F}_T$ contiene la información acumulada hasta el tiempo
+    aleatorio $T$. En particular, contiene el valor de $T$ y la trayectoria observada hasta ese
+    instante:
+    $$\displaystyle{
+      X_0,X_1,\ldots,X_T.
+    }$$
+  </p>
+
+  <p>
+    La propiedad fuerte de Markov afirma que, aun conociendo toda esa información, el futuro de
+    la cadena depende únicamente del estado actual $X_T$. Por ello, sobre el evento
+    $\{T<\infty\}$,
+    $$\displaystyle{
+      \mathbb{P}_i
+      \left(
+        X_{T+1}=j_1,\ldots,X_{T+m}=j_m
+        \mid \mathcal{F}_T
+      \right)
+      =
+      p_{X_Tj_1}p_{j_1j_2}\cdots p_{j_{m-1}j_m}.
+    }$$
+  </p>
+
+  <p>
+    En otras palabras, una vez que la cadena se detiene en el tiempo de paro $T$, el pasado
+    $X_0,\ldots,X_{T-1}$ ya no influye en la evolución futura, salvo por el estado en el que la
+    cadena quedó detenida, es decir, $X_T$.
+  </p>
+</div>
+
+
+<div class="definicion-box">
+  <h1 class="title-practica">Definición</h1>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ una cadena de Markov homogénea irreducible con espacio
+    de estados $E$. Para $i,j\in E$ y $n\geq 1$, se define
+    $$\displaystyle{
+      N_{ij}(n)=\sum_{s=1}^{n}\mathbf{1}_{\{X_s=j\}}.
+    }$$
+  </p>
+
+  <p>
+    La variable $N_{ij}(n)$ representa el número de visitas al estado $j$ hasta el tiempo $n$,
+    suponiendo que la cadena inicia en el estado $i$.
+  </p>
+
+  <p>
+    Además, se define el tiempo de primer regreso al estado $j$ por
+    $$\displaystyle{
+      T_j=\min\{n\geq 1:X_n=j\},
+    }$$
+    bajo la medida $\mathbb{P}_j$, es decir, suponiendo que la cadena inicia en $j$.
+  </p>
+
+  <p>
+    El <strong>tiempo medio de recurrencia</strong> del estado $j$ se define como
+    $$\displaystyle{
+      \mu_j=\mathbb{E}_j[T_j].
+    }$$
+    <ul>
+      <li>Si $\mu_j<\infty$, se dice que el estado $j$ tiene tiempo medio de recurrencia finito.</li>
+      <li>Si
+    $\mu_j=\infty$, se adopta la convención
+    $$\displaystyle{
+      \frac{1}{\mu_j}=0.
+    }$$</li>
+    </ul> 
+  </p>
+</div>
+
+
+
+<div class="nota-box">
+  <h1 class="title-practica">Teorema ergódico para cadenas de Markov</h1>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ una cadena de Markov homogénea irreducible con espacio
+    de estados $E$. Para cualesquiera estados $i,j\in E$,
+    $$\displaystyle{
+      \lim_{n\to\infty}\frac{N_{ij}(n)}{n}
+      =
+      \frac{1}{\mu_j}
+      \qquad
+      \mathbb{P}_i\text{-c.s.}
+    }$$
+    con la convención de que $1/\infty=0$.
+  </p>
+        <button class="respButton hvr-grow"> Demostración </button>
+        <div class="resp-box flexbox">
+          
+  <p>
+    Fijemos $i,j\in E$. La demostración se divide en dos casos: cuando la cadena es transitoria
+    y cuando la cadena es recurrente.
+  </p>
+
+
+  <p>
+    Supongamos ahora que la cadena es recurrente. Como la cadena es irreducible, todos sus
+    estados son recurrentes y se comunican entre sí. En particular,
+    $$\displaystyle{
+      \mathbb{P}_i(T_j<\infty)=1.
+    }$$
+    Es decir, empezando desde $i$, la cadena visita eventualmente al estado $j$ casi seguramente.
+  </p>
+
+  <p>
+    Definimos el tiempo de la $r$-ésima visita positiva al estado $j$ por
+    $$\displaystyle{
+      T_j^{(1)}=\min\{n\geq 1:X_n=j\},
+    }$$
+    y, para $r\geq 1$,
+    $$\displaystyle{
+      T_j^{(r+1)}
+      =
+      \min\{n>T_j^{(r)}:X_n=j\}.
+    }$$
+  </p>
+  <p><b>Afirmación:</b>
+    $$\displaystyle{
+      T_j^{(r)}<\infty
+      \qquad
+      \mathbb{P}_i\text{-c.s.}
+    }$$
+    para todo $r\geq 1$.
+  </p>
+
+<!-- 
+  <p>
+    Recordemos que $T_j^{(r)}$ representa el tiempo en que ocurre la $r$-ésima visita
+    al estado $j$. Por tanto, afirmar que
+    $$\displaystyle{
+      T_j^{(r)}<\infty
+      \qquad \mathbb{P}_i\text{-c.s.}
+    }$$
+    significa que, si la cadena inicia en el estado $i$, entonces la $r$-ésima visita
+    a $j$ ocurre en algún tiempo finito con probabilidad uno.
+  </p> -->
+
+  <p>
+    Como la cadena es irreducible, todos los estados se comunican entre sí. En particular,
+    desde el estado inicial $i$ se puede llegar al estado $j$. Además, como la cadena es
+    recurrente, esta visita ocurre eventualmente con probabilidad uno. Es decir,
+    $$\displaystyle{
+      \mathbb{P}_i(T_j^{(1)}<\infty)=1.
+    }$$
+    Así, la primera visita al estado $j$ ocurre casi seguramente.
+  </p>
+
+  <p>
+    Una vez que la cadena llega a $j$, la recurrencia de $j$ implica que, empezando desde
+    $j$, la cadena regresa nuevamente a $j$ con probabilidad uno:
+    $$\displaystyle{
+      \mathbb{P}_j(\tau_j<\infty)=1.
+    }$$
+    Por tanto, después de la primera visita a $j$, la cadena volverá a visitar $j$ casi
+    seguramente. Esa será la segunda visita.
+  </p>
+
+  <p>
+    El mismo razonamiento se repite después de cada nueva visita a $j$. En efecto, cada vez
+    que la cadena visita el estado $j$, el proceso se reinicia probabilísticamente desde $j$
+    por la propiedad fuerte de Markov. Como $j$ es recurrente, la cadena vuelve otra vez a
+    $j$ con probabilidad uno.
+  </p>
+
+  <p>
+    Por consiguiente, la cadena visita $j$ una primera vez, luego una segunda vez, luego una
+    tercera vez, y así sucesivamente, siempre en tiempos finitos, con probabilidad uno. Por
+    ello, para todo $r\geq 1$,
+    $$\displaystyle{
+      T_j^{(r)}<\infty
+      \qquad
+      \mathbb{P}_i\text{-c.s.}
+    }$$
+  </p>
+
+  <!-- <p> Supongamos que la cadena es irreducible y recurrente. Entonces todos los estados pertenecen a la misma clase recurrente. En particular, para cualesquiera $i,j\in E$ se tiene $$\displaystyle{ f_{ij}=\mathbb{P}_i(\tau_j<\infty)=1, }$$ donde $$\displaystyle{ \tau_j=\min\{n\geq 1:X_n=j\}. }$$ Por tanto, $$\displaystyle{ \mathbb{P}_i(T_j^{(1)}<\infty)=1. }$$ Es decir, la primera visita positiva al estado $j$ ocurre casi seguramente. </p> <p> Ahora probaremos por inducción que $$\displaystyle{ \mathbb{P}_i(T_j^{(r)}<\infty)=1 }$$ para todo $r\geq 1$. </p> <p> El caso $r=1$ ya fue demostrado. Supongamos ahora que, para cierto $r\geq 1$, $$\displaystyle{ \mathbb{P}_i(T_j^{(r)}<\infty)=1. }$$ Sobre el evento $\{T_j^{(r)}<\infty\}$, por definición del tiempo de la $r$-ésima visita, se cumple $$\displaystyle{ X_{T_j^{(r)}}=j. }$$ </p> <p> Como $T_j^{(r)}$ es un tiempo de paro, podemos aplicar la propiedad fuerte de Markov en dicho tiempo. Esta propiedad implica que, a partir de $T_j^{(r)}$, la cadena se comporta probabilísticamente como una nueva cadena que inicia en $j$. </p> <p> Por tanto, la probabilidad de que exista una visita adicional al estado $j$ después de $T_j^{(r)}$ es $$\displaystyle{ \mathbb{P}_j(\tau_j<\infty)=f_{jj}. }$$ Como $j$ es recurrente, se tiene $f_{jj}=1$. Luego, $$\displaystyle{ \mathbb{P}_i \left( T_j^{(r+1)}<\infty \mid T_j^{(r)}<\infty \right) = 1. }$$ </p> <p> Entonces, $$\displaystyle{ \mathbb{P}_i(T_j^{(r+1)}<\infty) = \mathbb{P}_i(T_j^{(r)}<\infty) \mathbb{P}_i \left( T_j^{(r+1)}<\infty \mid T_j^{(r)}<\infty \right) = 1\cdot 1 = 1. }$$ </p> <p> Por inducción, $$\displaystyle{ \mathbb{P}_i(T_j^{(r)}<\infty)=1 \qquad \text{para todo } r\geq 1. }$$ Equivalentemente, $$\displaystyle{ T_j^{(r)}<\infty \qquad \mathbb{P}_i\text{-c.s.} }$$ para todo $r\geq 1$. </p> -->
+
+  <b>Afirmación.</b> $T_j^{(r)}$ es un tiempo de paro.
+</p>
+
+<p>
+  En efecto, para cada $n\geq 1$ se tiene la igualdad de eventos
+  $$\displaystyle{
+    \left(T_j^{(r)}\leq n\right)
+    =
+    \left(
+      \sum_{s=1}^{n}\mathbf{1}_{(X_s=j)}\geq r
+    \right).
+  }$$
+</p>
+
+<p>
+  El evento $\{T_j^{(r)}\leq n\}$ significa que la $r$-ésima visita  al estado
+  $j$ ocurrió antes o en el tiempo $n$. Esto sucede si, y sólo si, entre los tiempos
+  $1,2,\ldots,n$ la cadena ha visitado el estado $j$ al menos $r$ veces.
+</p>
+
+<p>
+  Como
+  $$\displaystyle{
+    \sum_{s=1}^{n}\mathbf{1}_{(X_s=j)}
+  }$$
+  cuenta el número de visitas al estado $j$ hasta el tiempo $n$, se obtiene la igualdad anterior.
+</p>
+
+<p>
+  Además, el evento
+  $$\displaystyle{
+    \left(
+      \sum_{s=1}^{n}\mathbf{1}_{(X_s=j)}\geq r
+    \right)
+  }$$
+  depende únicamente de las variables $X_1,\ldots,X_n$. Por tanto, pertenece a
+  $\mathcal{F}_n=\sigma(X_0,X_1,\ldots,X_n)$.
+</p>
+
+<p>
+  En consecuencia,
+  $$\displaystyle{
+    \{T_j^{(r)}\leq n\}\in\mathcal{F}_n,
+  }$$
+  para todo $n\geq 1$. Por lo tanto, $T_j^{(r)}$ es un tiempo de paro.
+<!-- </p>
+    El evento del lado derecho puede decidirse observando únicamente la trayectoria
+    $X_0,X_1,\ldots,X_n$. Por tanto,
+    $$\displaystyle{
+      \{T_j^{(r)}\leq n\}\in \mathcal{F}_n.
+    }$$
+  </p> -->
+
+  <p>
+    Definimos ahora los tiempos entre visitas sucesivas a $j$ por
+    $$\displaystyle{
+      Y_r=T_j^{(r+1)}-T_j^{(r)},
+      \qquad r\geq 1.
+    }$$
+    La variable $Y_r$ mide cuántos pasos transcurren entre la $r$-ésima visita al estado $j$
+    y la siguiente visita al mismo estado.
+  </p>
+
+  <p>
+    Por la propiedad fuerte de Markov aplicada al tiempo de paro $T_j^{(r)}$, una vez que la cadena
+    visita el estado $j$, el proceso se reinicia probabilísticamente desde $j$. Como
+    $$\displaystyle{
+      X_{T_j^{(r)}}=j
+    }$$
+    sobre el evento $\{T_j^{(r)}<\infty\}$, el proceso posterior
+    $$\displaystyle{
+      (X_{T_j^{(r)}+m})_{m\in\mathbb{N}_{0}}
+    }$$
+    se comporta como una nueva cadena de Markov que inicia en $j$.
+  </p>
+
+  <p>
+    En particular, para $m\geq 1$, el evento $\{Y_r=m\}$ significa que después de la $r$-ésima
+    visita a $j$, la siguiente visita ocurre exactamente $m$ pasos después. Es decir,
+    $$\displaystyle{
+      \{Y_r=m\}
+      =
+      \{X_{T_j^{(r)}+1}\neq j,\ldots,
+      X_{T_j^{(r)}+m-1}\neq j,\,
+      X_{T_j^{(r)}+m}=j\}.
+    }$$
+    Por la propiedad fuerte de Markov,
+    $$\displaystyle{
+      \mathbb{P}_i(Y_r=m\mid \mathcal{F}_{T_j^{(r)}})
+      =
+      \mathbb{P}_j(T_j=m),
+      \qquad m\geq 1.
+    }$$
+  </p>
+
+  <p>
+    Por lo tanto, cada $Y_r$ tiene la misma distribución que $T_j$ bajo $\mathbb{P}_j$.
+    Además, al aplicar este argumento sucesivamente en los tiempos
+    $T_j^{(1)},T_j^{(2)},\ldots$, se obtiene que
+    $$\displaystyle{
+      Y_1,Y_2,\ldots
+    }$$
+    son variables aleatorias independientes e idénticamente distribuidas, con
+    $$\displaystyle{
+      Y_r\overset{d}{=}T_j
+      \quad \text{bajo } \mathbb{P}_j.
+    }$$
+    En particular,
+    $$\displaystyle{
+      \mathbb{E}_i[Y_r]=\mathbb{E}_j[T_j]=\mu_j.
+    }$$
+  </p>
+
+  <p>
+    Para $r\geq 2$, se tiene la descomposición
+    $$\displaystyle{
+      T_j^{(r)}
+      =
+      T_j^{(1)}+Y_1+\cdots+Y_{r-1}.
+    }$$
+    Dividiendo entre $r$, obtenemos
+    $$\displaystyle{
+      \frac{T_j^{(r)}}{r}
+      =
+      \frac{T_j^{(1)}}{r}
+      +
+      \frac{Y_1+\cdots+Y_{r-1}}{r}.
+    }$$
+  </p>
+
+  <p>
+    Como $T_j^{(1)}<\infty$ casi seguramente, se tiene
+    $$\displaystyle{
+      \frac{T_j^{(1)}}{r}\longrightarrow 0
+      \qquad
+      \mathbb{P}_i\text{-c.s.}
+    }$$
+    Por otro lado, por la ley fuerte de los grandes números,
+    $$\displaystyle{
+      \frac{Y_1+\cdots+Y_{r-1}}{r-1}
+      \longrightarrow
+      \mu_j
+      \qquad
+      \mathbb{P}_i\text{-c.s.}
+    }$$
+    cuando $\mu_j<\infty$. Si $\mu_j=\infty$, se usa la versión para variables no negativas con
+    esperanza infinita, que implica que el promedio converge a $\infty$ casi seguramente.
+  </p>
+
+  <p>
+    Como
+    $$\displaystyle{
+      \frac{Y_1+\cdots+Y_{r-1}}{r}
+      =
+      \frac{Y_1+\cdots+Y_{r-1}}{r-1}
+      \cdot
+      \frac{r-1}{r},
+    }$$
+    se concluye que
+    $$\displaystyle{
+      \frac{T_j^{(r)}}{r}
+      \longrightarrow
+      \mu_j
+      \qquad
+      \mathbb{P}_i\text{-c.s.}
+    }$$
+    con la posibilidad de que $\mu_j=\infty$.
+  </p>
+
+  <p>
+    Ahora relacionamos los tiempos de visita con el contador $N_{ij}(n)$. Si
+    $$\displaystyle{
+      N_{ij}(n)=r,
+    }$$
+    entonces hasta el tiempo $n$ han ocurrido exactamente $r$ visitas positivas a $j$. Por tanto,
+    la $r$-ésima visita ocurrió antes o en $n$, pero la $(r+1)$-ésima visita aún no ocurre antes
+    de $n$. Es decir,
+    $$\displaystyle{
+      T_j^{(r)}\leq n< T_j^{(r+1)}.
+    }$$
+  </p>
+
+  <p>
+    Tomando $r=N_{ij}(n)$, se obtiene
+    $$\displaystyle{
+      T_j^{(N_{ij}(n))}
+      \leq
+      n
+      <
+      T_j^{(N_{ij}(n)+1)}.
+    }$$
+    Como la cadena es recurrente e irreducible,
+    $$\displaystyle{
+      N_{ij}(n)\longrightarrow \infty
+      \qquad
+      \mathbb{P}_i\text{-c.s.}
+    }$$
+  </p>
+
+  <p>
+    Dividiendo la desigualdad anterior entre $N_{ij}(n)$, para $N_{ij}(n)\geq 1$, obtenemos
+    $$\displaystyle{
+      \frac{T_j^{(N_{ij}(n))}}{N_{ij}(n)}
+      \leq
+      \frac{n}{N_{ij}(n)}
+      <
+      \frac{T_j^{(N_{ij}(n)+1)}}{N_{ij}(n)}.
+    }$$
+    Además,
+    $$\displaystyle{
+      \frac{T_j^{(N_{ij}(n)+1)}}{N_{ij}(n)}
+      =
+      \frac{T_j^{(N_{ij}(n)+1)}}{N_{ij}(n)+1}
+      \cdot
+      \frac{N_{ij}(n)+1}{N_{ij}(n)}.
+    }$$
+  </p>
+
+  <p>
+    Como
+    $$\displaystyle{
+      \frac{T_j^{(r)}}{r}\longrightarrow \mu_j
+    }$$
+    y
+    $$\displaystyle{
+      \frac{N_{ij}(n)+1}{N_{ij}(n)}\longrightarrow 1,
+    }$$
+    se obtiene, por el teorema del sándwich, que si $\mu_j<\infty$, entonces
+    $$\displaystyle{
+      \frac{n}{N_{ij}(n)}
+      \longrightarrow
+      \mu_j
+      \qquad
+      \mathbb{P}_i\text{-c.s.}
+    }$$
+    Por tanto,
+    $$\displaystyle{
+      \frac{N_{ij}(n)}{n}
+      \longrightarrow
+      \frac{1}{\mu_j}
+      \qquad
+      \mathbb{P}_i\text{-c.s.}
+    }$$
+  </p>
+
+  <p>
+    Si $\mu_j=\infty$, entonces
+    $$\displaystyle{
+      \frac{T_j^{(N_{ij}(n))}}{N_{ij}(n)}
+      \longrightarrow
+      \infty,
+    }$$
+    y la desigualdad anterior implica que
+    $$\displaystyle{
+      \frac{n}{N_{ij}(n)}
+      \longrightarrow
+      \infty.
+    }$$
+    En consecuencia,
+    $$\displaystyle{
+      \frac{N_{ij}(n)}{n}
+      \longrightarrow
+      0.
+    }$$
+    Como en este caso $1/\mu_j=0$, también se cumple
+    $$\displaystyle{
+      \frac{N_{ij}(n)}{n}
+      \longrightarrow
+      \frac{1}{\mu_j}.
+    }$$
+  </p>
+
+  <p>
+    Combinando los casos transitorio y recurrente, concluimos que, para cualesquiera estados
+    $i,j\in E$,
+    $$\displaystyle{
+      \lim_{n\to\infty}\frac{N_{ij}(n)}{n}
+      =
+      \frac{1}{\mu_j}
+      \qquad
+      \mathbb{P}_i\text{-c.s.}
+    }$$
+    
+  </p>
+</div>
+</div>
+
+
+  </body>
+
+
+  
+<!-- Donde aparecerá la fecha de la última modificación -->
+<footer>
+  <center>
+   <p id="ultima-actualizacion"></p>
+  </center>
+</footer>
+<script>
+// Obtenemos la fecha y hora de la última modificación del documento
+const fechaModificacion = new Date(document.lastModified);
+
+// Opciones para formatear la fecha (por ejemplo, DD/MM/AAAA)
+const opcionesFecha = { day: '2-digit', month: '2-digit', year: 'numeric' };
+const fechaFormateada = fechaModificacion.toLocaleDateString('es-ES', opcionesFecha);
+
+// Obtenemos la hora (HH:MM:SS)
+const horaFormateada = fechaModificacion.toLocaleTimeString('es-ES', {
+    hour: '2-digit', minute: '2-digit'
+});
+
+// Insertamos la fecha y la hora en el elemento con el ID "ultima-modificacion"
+document.getElementById("ultima-actualizacion").textContent = `Última actualización: ${fechaFormateada}`;
+</script>
+
+
+
+</html>

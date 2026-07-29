@@ -1,0 +1,203 @@
+
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="./main.js"></script>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="./style.css" />
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1],
+            id: "\\operatorname{id}",
+          },
+          tags: "ams", /* this part is for numbered equations */
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+    </script>
+
+    
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+      /* body.number-title
+      {
+      counter-reset: temaCounter 1 subsectioncounter ;
+      } */
+      body.fondo-body{
+        counter-reset: temaCounter 1 sectionCounter;
+      }
+
+      /* h1.page-number-title
+      {
+      counter-reset: sectionCounter 0;
+      }  */
+
+      h1.tema-number-title
+          {
+          counter-reset: sectionCounter 0;
+          } 
+
+      h1.number-title
+      {
+      counter-reset: subsectionCounter;
+      /* counter-reset: subsectionCounter; */
+      }
+
+    </style>
+
+
+  
+    <!-- Top Menu  -->
+    
+      
+        <header class="main-header">
+        
+          <div class="logo_superior_umar">
+          <a href="https://www.umar.mx" target="_blank"><img src="./Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+          <div class="contenedor_titulo">
+          <div class="title">Procesos Estocásticos</div>
+          <div class="subtitle">Universidad del Mar, campus Huatulco</div>
+          <div class="subsubtitle">Licenciatura en Actuaría</div>
+          <!-- <div class="subsubtitle"><a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_administracion_turistica" target="_blank">Licenciatura en Administración Turística</a> </div>    -->
+          </div>
+          <div class="logo_superior_umar">
+            <a href="https://www.umar.mx" target="_blank"><img src="./Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+
+      
+        </header> 
+
+        <nav class="top-nav">
+          <ul>
+            <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Home.html"> Inicio  </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Informacion_General.html"> Información</a> </li>
+            <!-- <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Notas.html"> Notas  </a> </li> -->
+            <!-- <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Quizes.html"> Quizes  </a> </li>-->
+            <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Ejercicios.html">Ejercicios</a></li> 
+            <!-- <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Examenes.html"> Archivos </a> </li> -->
+            <!-- <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Links.html"> Links</a> </li> -->
+          </ul>
+          </nav>
+        <!-- 
+          <nav class="small-nav" align=right>
+            <button onclick="myFunction()">Claro/Obscuro 
+          </nav> 
+        -->
+
+      <!-- This part is for title in tab-->
+            
+      <title>Procesos Estocásticos</title>
+      </head>  
+          
+        <body class="fondo-body" >
+          
+        <div class="info-profesor-box">
+            <!-- <div class="informacion_profesor">  -->
+              <div class="title_nombre">Profesor: Pablo Jorge Hernández Hernández</div>
+              <div class="subtitle_nombre">Instituto de Investigación de Matemáticas y Actuaría (IIMA)</div>
+              <div class="subtitle_nombre">Cubículo #5</div>            
+            <!-- </div> -->
+        </div>
+
+      <div class="info-box" style = "font-family: 'Oldenburg', cursive;">
+       <center><h1 class="titulo">Temario</h1></center>
+
+          <ol class="lista">
+
+            <li>Introducción.</li>
+            <ol class="sublista">
+              <li>Definición, elementos básicos y clasificación.</li>
+              <li>Ejemplos y simulación de trayectorias.</li>
+            </ol>
+
+            <li>Procesos de Markov.</li>
+            <ol class="sublista">
+              <li>Tiempo y espacio de estados a lo más numerable.</li>
+              <li>Tiempo continuo y espacio de estados a lo más numerable.</li>
+              <li>Simulación de cadenas de Markov.</li>
+            </ol>
+
+            <li>Procesos de contar.</li>
+            <ol class="sublista">
+              <li>Proceso de Poisson.</li>
+              <li>Proceso de renovación.</li>
+            </ol>
+
+            <li>Martingalas.</li>
+            <ol class="sublista">
+              <li>Definiciones y ejemplos.</li>
+              <li>Propiedades principales.</li>
+            </ol>
+
+            <li>Procesos de segundo orden.</li>
+            <ol class="sublista">
+              <li>Definición y conceptos elementales.</li>
+              <li>Procesos Gaussianos.</li>
+              <li>Movimiento browniano y procesos derivados de él.</li>
+            </ol>
+
+            <li>Introducción a las ecuaciones diferenciales estocásticas.</li>
+            <ol class="sublista">
+              <li>Motivación, ejemplos y aplicaciones.</li>
+              <li>Nociones básicas del cálculo estocástico.</li>
+            </ol>
+
+            <li>Simulación de procesos estocásticos.</li>
+            <ol class="sublista">
+              <li>Cadenas de Markov.</li>
+              <li>Proceso Poisson.</li>
+              <li>Trayectorias brownianas.</li>
+              <li>Introducción a los métodos Markov Chain Monte Carlo (MCMC).</li>
+            </ol>
+
+          </ol>
+                  
+                
+      </div>
+ 
+      <div class="info-box"  style = "font-family: 'Oldenburg', cursive;">
+          <center><h1 class="titulo">Bibliografía</h1></center>
+        <br>
+
+        <b><font>Básica</font></b>
+        <ol class="lista">
+          <li>Hoel P. G., Port S. C., Stone C. J. (1972) <i>Introduction to stochastic processes</i>, USA: Houghton Mifflin Co.</li>
+          <li>Mikosch T. (1999) <i>Elementary stochastic calculus with finance in view</i>, Singapore: World Scientific Publishing Co. Pte.</li>
+          <li>Norris J. R. (1998) <i>Markov Chains</i>, USA: Cambridge University Press.</li>
+          <li>Oksendal B. (2003) <i>Stochastic differential equations: an introduction with applications</i> (6a ed.), Germany: Springer-Verlag.</li>
+          <li>Resnick S. I. (2005) <i>Adventures in Stochastic Processes</i> (4a ed.), USA: Birkhäuser.</li>
+          <li>Ross S. M. (1996) <i>Stochastic processes</i> (2a ed.), USA: John Wiley &amp; Sons Inc.</li>
+          <li>Ross S. M. (2010) <i>Introduction to probability models</i> (10a ed.), USA: Academic Press.</li>
+        </ol>
+
+        <b><font>Consulta</font></b>
+        <ol class="lista">
+          <li>Brzezniak Z., Zastawniak T. (1999) <i>Basic stochastic processes. A course through exercises</i>, UK: Springer-Verlag.</li>
+          <li>Chung K. L. (1979) <i>Elementary probability theory with stochastic processes</i> (3a ed.), USA: Springer-Verlag.</li>
+          <li>Karlin S., Taylor H. (1998) <i>An introduction to stochastic modeling</i> (3a ed.), USA: Academic Press.</li>
+          <li>Karlin S., Taylor H. (1975) <i>A first course in stochastic processes</i> (2a ed.), USA: Academic Press.</li>
+          <li>Rolski T., Schmidli H., Schmidt V., Teugels J. (1999) <i>Stochastic processes for insurance and finance</i>, UK: John Wiley &amp; Sons Ltd.</li>
+        </ol>
+
+  </div>
+
+
+      </body>
+  </html>

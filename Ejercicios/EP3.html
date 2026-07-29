@@ -1,0 +1,473 @@
+
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="../main.js"></script>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="../style.css" />
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1],
+            id: "\\operatorname{id}",
+          },
+          tags: "ams", /* this part is for numbered equations */
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+    </script>
+    
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+      /* body.number-title
+      {
+      counter-reset: temaCounter 1 subsectioncounter ;
+      } */
+      body.fondo-body{
+        counter-reset: temaCounter 3 sectionCounter;
+      }
+
+      /* h1.page-number-title
+      {
+      counter-reset: sectionCounter 0;
+      }  */
+
+      h1.tema-number-title
+          {
+          counter-reset: sectionCounter 0;
+          } 
+
+      h1.number-title
+      {
+      counter-reset: subsectionCounter;
+      /* counter-reset: subsectionCounter; */
+      }
+
+    </style>
+
+
+  
+    <!-- Top Menu  -->
+    
+      
+        <header class="main-header">
+        
+          <div class="logo_superior_umar">
+          <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+          <div class="contenedor_titulo">
+          <div class="title">Procesos Estocásticos</div>
+          <div class="subtitle">Universidad del Mar, campus Huatulco</div>
+          <div class="subsubtitle">Licenciatura en Actuaría</div>
+          <!-- <div class="subsubtitle"><a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_administracion_turistica" target="_blank">Licenciatura en Administración Turística</a> </div>    -->
+          </div>
+          <div class="logo_superior_umar">
+            <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+
+      
+        </header> 
+
+        <nav class="top-nav">
+          <ul>
+            <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Home.html"> Inicio  </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Informacion_General.html"> Información</a> </li>
+            <!-- <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Notas.html"> Notas  </a> </li> -->
+            <!-- <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Quizes.html"> Quizes  </a> </li>-->
+            <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Ejercicios.html">Ejercicios</a></li> 
+            <!-- <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Examenes.html"> Archivos </a> </li> -->
+            <!-- <li> <a href="https://pjhh-umar.github.io/ProcesosEstocasticos/Links.html"> Links</a> </li> -->
+          </ul>
+          </nav>  
+        
+        <!-- 
+          <nav class="small-nav" align=right>
+            <button onclick="myFunction()">Claro/Obscuro 
+          </nav> 
+        -->
+
+      <!-- This part is for title in tab-->
+            
+      <title>Ejercicios propuestos tercer examen parcial  </title>
+      </head>  
+
+
+
+<body class="fondo-body" ><h1 class="page-title-practica"> Ejercicios propuestos tercer examen parcial </h1>   
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+  <p>
+    ¿Cuál es el número máximo y mínimo de clases de comunicación que puede existir para una cadena de Markov de $n$ estados? Dibuje un diagrama de transición ilustrando cada una de estas dos situaciones.
+  </p>
+</div>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+  <p>
+    Dibuje el diagrama de transición de una cadena de Markov que sea:
+  </p>
+  <ol class="two-column">
+    <li>finita e irreducible.</li><br>
+    <li>finita y reducible.</li><br>
+    <li>infinita e irreducible.</li><br>
+    <li>infinita y reducible.</li><br>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+  <p>
+    Considere una cadena de Markov con $n$ estados. Demuestre que si $i \to j$ con $i \neq j$, entonces es posible pasar de $i$ a $j$ en a lo más $n-1$ pasos.
+  </p>
+</div>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+  <p>
+    Demuestre que no existe una cadena de Markov irreducible de periodo cero.
+  </p>
+</div>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+  <p>
+    Demuestre que toda cadena de Markov finita tiene por lo menos un estado de periodo positivo.
+  </p>
+</div>
+
+<div class="ejercicio-box"> 
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ una cadena de Markov homogénea con espacio de estados
+    $E$, finito o numerable, y matriz de transición $(p_{xy})_{x,y\in E}$. Demuestre que
+    $$
+    \displaystyle{
+    i\to j
+    \quad \Longleftrightarrow \quad
+    f_{ij}>0.
+    }
+    $$
+  </p>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ una cadena de Markov homogénea con espacio de estados
+    $E$, finito o numerable, y matriz de transición $(p_{xy})_{x,y\in E}$. Use la identidad:
+    $$
+    \displaystyle{
+    p_{ij}(n)=\sum_{k=1}^{n} f_{ij}(k)p_{jj}(n-k),
+    \qquad n\geq 1,
+    }
+    $$
+    para demostrar que, para cada $n\geq 1$,
+    $$
+    \displaystyle{
+    p_{ij}(n)\leq \mathbb{P}(\tau_{ij}\leq n \mid X_0=i).
+    }
+    $$
+  </p>
+
+  <p>
+    Observe que la igualdad se cumple, en particular, cuando $j$ es un estado absorbente.
+  </p>
+</div>
+
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ una cadena de Markov homogénea con espacio de estados $E$,
+    finito o numerable, y matriz de transición $(p_{xy})_{x,y\in E}$. Demuestre las siguientes igualdades:
+  </p>
+
+  <ol>
+    <li>
+      $\displaystyle{\mathbb{P}(\tau_{ij}=1\mid X_0=i)=p_{ij}.}$
+    </li><br>
+
+    <li>
+      $\displaystyle{\mathbb{P}(\tau_{ij}=2\mid X_0=i)=\sum_{k\neq j} p_{ik}p_{kj}.}$
+    </li><br>
+
+    <li>
+      Para todo $n\geq 1$,
+      $$
+      \displaystyle{
+      \mathbb{P}(\tau_{ij}=n+1\mid X_0=i)
+      =
+      \sum_{k\neq j} p_{ik}\,
+      \mathbb{P}(\tau_{kj}=n\mid X_0=k).
+      }
+      $$
+    </li><br>
+  </ol>
+</div>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+  <p>
+    Demuestre que no existe una cadena de Markov irreducible de periodo cero.
+  </p>
+</div>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+  <p>
+    Demuestre que toda cadena de Markov finita tiene por lo menos un estado de periodo positivo.
+  </p>
+</div>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    <strong>El problema del mono.</strong> Suponga que un mono escribe caracteres al azar en una máquina de escribir.
+    ¿Cuál es la probabilidad de que eventualmente el mono escriba exactamente, y sin ningún error, las obras completas de Shakespeare?
+  </p>
+</div>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ una cadena de Markov homogénea con espacio de estados
+    $E=\{0,1\}$. Suponga que, respecto del orden de estados $(0,1)$, su matriz de transición está dada por
+    $$
+    \displaystyle{
+    P=
+    \begin{pmatrix}
+    1-\alpha & \alpha\\
+    \beta & 1-\beta
+    \end{pmatrix},
+    }
+    $$
+    donde $\alpha,\beta\in[0,1]$ y
+    $$
+    \displaystyle{
+    0<\alpha+\beta < 2.
+    }
+    $$
+  </p>
+
+  <p>
+    Determine todas las probabilidades de transición en $n$ pasos de la cadena, es decir,
+    encuentre explícitamente
+    $$
+    \displaystyle{
+    p_{00}^{(n)},\quad p_{01}^{(n)},\quad p_{10}^{(n)},\quad p_{11}^{(n)},
+    \qquad n\geq 1.
+    }
+    $$
+    En particular, calcule
+    $$
+    \displaystyle{
+    \mathbb{P}(X_n=0\mid X_0=0)=p_{00}^{(n)}.
+    }
+    $$
+  </p>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    <strong>Problema de la ruina.</strong> Un jugador tiene inicialmente $i$ unidades de capital,
+    donde $i\in\{0,1,\ldots,N\}$ y $N\in\mathbb{N}$. En cada jugada, el jugador gana una unidad
+    con probabilidad $p$ y pierde una unidad con probabilidad $q=1-p$, donde $0<p<1$.
+  </p>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ la cadena de Markov que representa el capital del jugador
+    después de $n$ jugadas. El juego termina cuando el jugador alcanza el estado $0$ o el estado $N$.
+    Es decir, los estados $0$ y $N$ son absorbentes.
+  </p>
+
+  <ol>
+    <li>
+      Escriba la matriz de transición de la cadena de Markov $(X_n)_{n\in\mathbb{N}_{0}}$.
+    </li><br>
+
+    <li>
+      Clasifique los estados de la cadena en transitorios, recurrentes y absorbentes.
+    </li><br>
+
+    <li>
+      Defina
+      $$
+      \displaystyle{
+      T_0=\min\{n\geq 0:X_n=0\},
+      \qquad
+      T_N=\min\{n\geq 0:X_n=N\}.
+      }
+      $$
+      Interprete los eventos $\{T_0 < T_N\}$ y $\{T_N < T_0\}$.
+    </li><br>
+
+    <li>
+      Sea
+      $$
+      \displaystyle{
+      r_i=\mathbb{P}_i(T_0 < T_N),
+      \qquad i=0,1,\ldots,N,
+      }
+      $$
+      la probabilidad de ruina cuando el capital inicial es $i$. Demuestre que
+      $$
+      \displaystyle{
+      r_i=pr_{i+1}+qr_{i-1},
+      \qquad i=1,\ldots,N-1,
+      }
+      $$
+      con condiciones de frontera
+      $$
+      \displaystyle{
+      r_0=1,
+      \qquad
+      r_N=0.
+      }
+      $$
+    </li><br>
+
+    <li>
+      Resuelva la ecuación anterior y obtenga una expresión explícita para $r_i$ en los casos
+      $p\neq q$ y $p=q=\frac{1}{2}$.
+    </li><br>
+  </ol>
+</div>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    <strong>El sistema Bonus-Malus en el seguro de automóviles.</strong>
+    Considere un sistema de tarificación Bonus-Malus con seis clases, donde la clase $1$
+    representa el mayor bonus y la clase $6$ representa el mayor malus.
+  </p>
+
+  <p>
+    Suponga que, en cada periodo, un asegurado puede tener o no tener siniestros. Denote por
+    $q$ la probabilidad de que el asegurado tenga al menos un siniestro durante un periodo, con
+    $0< q < 1$. Por lo tanto, la probabilidad de que no tenga siniestros durante un periodo es $1-q$.
+  </p>
+
+  <p>
+    El sistema evoluciona de acuerdo con las siguientes reglas:
+  </p>
+
+  <ul>
+    <li>
+      Si el asegurado no tiene siniestros durante el periodo, entonces pasa de la clase $i$ a la clase
+      $\max\{1,i-1\}$.
+    </li><br>
+
+    <li>
+      Si el asegurado tiene al menos un siniestro durante el periodo, entonces pasa de la clase $i$ a la clase $6$.
+    </li><br>
+  </ul>
+
+  <p>
+    Sea $(X_n)_{n\in\mathbb{N}_{0}}$ la cadena de Markov que representa la clase de tarificación
+    del asegurado al inicio del periodo $n$. El espacio de estados es
+    $$
+    \displaystyle{
+    E=\{1,2,3,4,5,6\}.
+    }
+    $$
+  </p>
+
+  <ol>
+    <li>
+      Escriba la matriz de transición de la cadena de Markov $(X_n)_{n\in\mathbb{N}_{0}}$.
+    </li><br>
+
+    <li>
+      Demuestre que la cadena es irreducible y aperiódica.
+    </li><br>
+
+    <li>
+      Sea
+      $$
+      \displaystyle{
+      N_n^{(j)}=\sum_{m=0}^{n-1}\mathbf{1}_{\{X_m=j\}},
+      \qquad j\in E,
+      }
+      $$
+      el número de periodos, entre los tiempos $0,1,\ldots,n-1$, en los que el asegurado se encuentra
+      en la clase $j$. Determine la proporción de tiempo que, en el largo plazo, el asegurado pasa en la clase $j$; es decir, calcule
+      $$
+      \displaystyle{
+      \lim_{n\to\infty}\frac{N_n^{(j)}}{n},
+      \qquad j=1,\ldots,6.
+      }
+      $$
+    </li><br>
+
+    <li>
+      Sean $c_1,c_2,\ldots,c_6>0$ las primas correspondientes a las clases $1,2,\ldots,6$,
+      respectivamente. Determine la prima promedio de largo plazo que paga un asegurado, es decir,
+      calcule
+      $$
+      \displaystyle{
+      \lim_{n\to\infty}
+      \frac{1}{n}\sum_{m=0}^{n-1} c_{X_m}.
+      }
+      $$
+    </li><br>
+  </ol>
+</div>
+
+
+
+<!-- Donde aparecerá la fecha de la última modificación -->
+<footer>
+  <center>
+   <p id="ultima-actualizacion"></p>
+  </center>
+</footer>
+<script>
+// Obtenemos la fecha y hora de la última modificación del documento
+const fechaModificacion = new Date(document.lastModified);
+
+// Opciones para formatear la fecha (por ejemplo, DD/MM/AAAA)
+const opcionesFecha = { day: '2-digit', month: '2-digit', year: 'numeric' };
+const fechaFormateada = fechaModificacion.toLocaleDateString('es-ES', opcionesFecha);
+
+// Obtenemos la hora (HH:MM:SS)
+const horaFormateada = fechaModificacion.toLocaleTimeString('es-ES', {
+    hour: '2-digit', minute: '2-digit'
+});
+
+// Insertamos la fecha y la hora en el elemento con el ID "ultima-modificacion"
+document.getElementById("ultima-actualizacion").textContent = `Última actualización: ${fechaFormateada}`;
+</script>
+
+
+
+</body>
+</html>
