@@ -31,21 +31,7 @@
       };
     </script>
 
-    <script>
-  function toggleRespuestas(btn) {
-    var respuestas = btn.nextElementSibling;
-    if (respuestas.style.display === "none" || respuestas.style.display === "") {
-      respuestas.style.display = "block";
-      btn.textContent = "Ocultar Respuestas";
-    } else {
-      respuestas.style.display = "none";
-      btn.textContent = "Mostrar Respuestas";
-    }
-  }
-</script>
-
-    
-    <!-- This part restart counter of cards to start at n+1 -->
+<!-- This part restart counter of cards to start at n+1 -->
     <style>
       /* body.number-title
       {
@@ -180,9 +166,1732 @@
 
 
 
+<!-- ========================================================= -->
+<!-- TEMA: PROPOSICIONES LÓGICAS SIMPLES Y COMPUESTAS -->
+<!-- ========================================================= -->
+
+<!-- <h1 class="tema-number-title">Proposiciones lógicas simples y compuestas</h1> -->
+
 <div class="ejercicio-box">
-  <h1 class="number-title-practica">Ejercicio </h1>
-  <p></p>
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Analiza cada uno de los siguientes enunciados y determina si es o no una
+    <strong>proposición lógica</strong>. En caso de serlo, indica si es
+    <strong>simple</strong> o <strong>compuesta</strong> y, cuando sea posible,
+    determina su <strong>valor de verdad</strong>.
+  </p>
+
+  <ol type="a" class="two-column">
+
+    <!-- <li>El número $7$ es primo.</li> -->
+
+    <!-- <li>Cierra la puerta.</li> -->
+
+    <!-- <li>$x+3=8$.</li> -->
+
+    <li>El número $15$ es divisible entre $3$ y entre $5$.</li>
+
+    <li>¿Cuál es tu carrera?</li>
+
+    <li>Si $4$ es par, entonces $4^2$ es par.</li>
+
+    <li>Huatulco se encuentra en el estado de Oaxaca.</li>
+
+    <li>$10< 5$ o $6< 9$.</li>
+
+    <li>No es cierto que $21$ sea un número primo.</li>
+
+    <li>$18$ es par y no es un número primo.</li>
+
+    <li>
+      Si $30$ es divisible entre $6$, entonces $30$ es par y
+      divisible entre $3$.
+    </li>
+
+    <!-- <li>
+      $7$ es primo si y sólo si tiene exactamente dos divisores positivos.
+    </li> -->
+
+    <!-- <li>
+      $16$ es un cuadrado perfecto o $16$ es impar, pero no ambas cosas.
+    </li> -->
+
+    <!-- <li>
+      No es cierto que $8$ sea impar o que $9$ sea un número primo.
+    </li> -->
+
+    <li>
+      Todo número natural divisible entre $6$ es divisible entre $3$.
+    </li>
+
+    <li>$x^2-5x+6=0$.</li>
+
+    <li>Existe un número primo que es par.</li>
+
+    <li>
+      El número $91$ es primo o es divisible entre $7$.
+    </li>
+
+    <li>
+      Si $15$ es múltiplo de $5$, entonces $15^2$ es múltiplo de $25$.
+    </li>
+
+    <li>El examen de Lógica y Conjuntos será muy fácil.</li>
+
+    <li>Ningún número impar es divisible entre $2$.</li>
+
+    <li>
+      $7<10$ y no es cierto que $12$ sea primo.
+    </li>
+
+    <li>¿Todo número primo es impar?</li>
+
+    <li>Existe vida inteligente fuera del sistema solar.</li>
+
+  </ol>
+</div>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    En cada proposición compuesta, identifica las proposiciones simples
+    que la forman y señala cuál es el <strong>conectivo lógico principal</strong>.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      Si $12$ es par y $12$ es divisible entre $3$, entonces $12$ es divisible entre $6$.
+    </li>
+
+    <li>
+      $17$ es primo o $17$ es compuesto, pero no ambas cosas.
+    </li>
+
+    <li>
+      No es cierto que $15$ sea primo o que $8$ sea impar.
+    </li>
+
+    <li>
+      $10$ es par si y sólo si $10^2$ es par.
+    </li>
+
+    <li>
+      Si $9$ no es primo, entonces $9$ es compuesto y es impar.
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Considera las proposiciones:</p>
+
+  $$p:\text{ El estudiante asiste a clase},$$
+  $$q:\text{ El estudiante estudia},$$
+  $$r:\text{ El estudiante aprueba el examen}.$$
+
+  <p>Escribe cada una de las siguientes afirmaciones utilizando notación lógica.</p>
+
+  <ol class="two-column">
+    <li>
+      El estudiante asiste a clase y estudia, pero no aprueba el examen.
+    </li>
+
+    <li>
+      Si el estudiante asiste a clase y estudia, entonces aprueba el examen.
+    </li>
+
+    <li>
+      El estudiante aprueba el examen si y sólo si estudia.
+    </li>
+
+    <li>
+      No es cierto que el estudiante estudie y no apruebe el examen.
+    </li>
+
+    <li>
+      Si el estudiante no asiste a clase, entonces estudia o no aprueba el examen.
+    </li>
+  </ol>
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- TEMA: VALOR DE VERDAD -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Valor de verdad</h1>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Determina el valor de verdad de cada proposición. Justifica brevemente tu respuesta.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      $37$ es primo y $37$ es impar.
+    </li>
+
+    <li>
+      $51$ es primo o $51$ es divisible entre $3$.
+    </li>
+
+    <li>
+      Si $25$ es par, entonces $5^2=25$.
+    </li>
+
+    <li>
+      Si $49$ es múltiplo de $7$, entonces $49$ es par.
+    </li>
+
+    <li>
+      $18$ es divisible entre $6$ si y sólo si $18$ es divisible entre $3$.
+    </li>
+
+    <li>
+      No es cierto que $17$ sea primo y $17$ sea par.
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Sean $p$, $q$ y $r$ proposiciones tales que
+  </p>
+
+  $$p=V,\qquad q=F,\qquad r=V.$$
+
+  <p>Determina el valor de verdad de:</p>
+
+  <ol class="two-column">
+    <li>$\neg p\lor q$</li>
+    <li>$(p\land r)\to q$</li>
+    <li>$p\to(q\lor r)$</li>
+    <li>$(p\to q)\lor r$</li>
+    <li>$\neg(q\land r)\leftrightarrow p$</li>
+    <li>$[p\land(q\lor r)]\to\neg q$</li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Determina todos los posibles valores de verdad de $p$ y $q$ que hacen
+    verdadera cada una de las siguientes proposiciones.
+  </p>
+
+  <ol class="two-column">
+    <li>$p\land\neg q$</li>
+    <li>$p\to q$</li>
+    <li>$\neg p\lor\neg q$</li>
+    <li>$(p\lor q)\land\neg q$</li>
+    <li>$p\leftrightarrow\neg q$</li>
+  </ol>
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- TEMA: NEGACIÓN -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Negación</h1>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Escribe la negación de cada afirmación de la manera más clara posible.
+    Evita limitarte a escribir expresiones como ``no es cierto que''.
+  </p>
+
+  <ol class="two-column">
+    <li>Todos los estudiantes aprobaron el examen.</li>
+    <li>Ningún número primo es par.</li>
+    <li>Algún número natural es divisible entre $4$ y entre $6$.</li>
+    <li>Algún estudiante no entregó la tarea.</li>
+    <li>Todos los números primos mayores que $2$ son impares.</li>
+    <li>Ningún número entero negativo es natural.</li>
+    <li>Algún número real no es positivo.</li>
+    <li>Todos los estudiantes resolvieron al menos un ejercicio.</li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Escribe una proposición equivalente a la negación de cada una de las
+    siguientes expresiones, de manera que los símbolos de negación queden
+    aplicados únicamente a proposiciones simples.
+  </p>
+
+  <ol class="two-column">
+    <li>$\neg(p\land q)$</li>
+    <li>$\neg(p\lor q)$</li>
+    <li>$\neg(p\to q)$</li>
+    <li>$\neg[p\lor(q\land r)]$</li>
+    <li>$\neg[(p\lor q)\to r]$</li>
+    <li>$\neg[(p\to q)\land r]$</li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Considera la afirmación:</p>
+
+  <p>
+    <em>
+      ``Si todos los estudiantes entregaron la tarea, entonces algún estudiante
+      obtuvo calificación perfecta.''
+    </em>
+  </p>
+
+  <p>
+    Escribe su negación sin utilizar la expresión ``no es cierto que''.
+  </p>
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- TEMA: CONJUNCIÓN -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Conjunción</h1>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Determina el valor de verdad de las siguientes conjunciones.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      $29$ es primo y $29+1$ es par.
+    </li>
+
+    <li>
+      $81$ es múltiplo de $9$ y $81$ es múltiplo de $6$.
+    </li>
+
+    <li>
+      $\sqrt{144}=12$ y $12^2=144$.
+    </li>
+
+    <li>
+      $2^5=32$ y $32$ es primo.
+    </li>
+
+    <li>
+      No es cierto que $15$ sea par y $17$ es primo.
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Se sabe que la proposición
+  </p>
+
+  $$p\land(q\lor r)$$
+
+  <p>es verdadera.</p>
+
+  <ol class="two-column">
+    <li>¿Qué puedes afirmar necesariamente acerca del valor de verdad de $p$?</li>
+    <li>¿Puede $q$ ser falsa?</li>
+    <li>¿Pueden $q$ y $r$ ser falsas simultáneamente?</li>
+    <li>Describe todas las combinaciones posibles de valores de verdad de $p$, $q$ y $r$.</li>
+  </ol>
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- TEMA: DISYUNCIÓN -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Disyunción</h1>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Determina el valor de verdad de cada proposición, recordando que
+    la disyunción utilizada es inclusiva.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      $20$ es múltiplo de $4$ o $20$ es múltiplo de $5$.
+    </li>
+
+    <li>
+      $17$ es compuesto o $17$ es impar.
+    </li>
+
+    <li>
+      $25$ es primo o $\sqrt{25}=5$.
+    </li>
+
+    <li>
+      $12$ es impar o $12$ no es divisible entre $3$.
+    </li>
+
+    <li>
+      No es cierto que $9$ sea primo o $16$ es un cuadrado perfecto.
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Se sabe que
+  </p>
+
+  $$\neg p\lor(q\land r)$$
+
+  <p>es falsa.</p>
+
+  <ol class="two-column">
+    <li>¿Cuál debe ser el valor de verdad de $p$?</li>
+    <li>¿Qué puedes concluir acerca de $q\land r$?</li>
+    <li>¿Es posible que $q$ y $r$ sean ambas verdaderas?</li>
+    <li>Encuentra todas las combinaciones posibles de $p$, $q$ y $r$.</li>
+  </ol>
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- TEMA: IMPLICACIÓN -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Implicación</h1>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Determina el valor de verdad de cada implicación y explica brevemente
+    por qué.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      Si $15$ es divisible entre $4$, entonces $15$ es impar.
+    </li>
+
+    <li>
+      Si $27$ es múltiplo de $3$, entonces $27$ es múltiplo de $9$.
+    </li>
+
+    <li>
+      Si $31$ es compuesto, entonces $31$ es par.
+    </li>
+
+    <li>
+      Si $8$ es primo, entonces $2+2=5$.
+    </li>
+
+    <li>
+      Si $49$ es un cuadrado perfecto, entonces $49$ es impar.
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Para cada afirmación, decide si es verdadera o falsa.
+    Si es falsa, proporciona un contraejemplo.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      Si un número entero es múltiplo de $12$, entonces es múltiplo de $4$.
+    </li>
+
+    <li>
+      Si un número entero es múltiplo de $4$, entonces es múltiplo de $12$.
+    </li>
+
+    <li>
+      Si $n^2$ es par, entonces $n$ es par.
+    </li>
+
+    <li>
+      Si $a+b$ es par, entonces $a$ y $b$ tienen la misma paridad.
+    </li>
+
+    <li>
+      Si $ab$ es impar, entonces $a$ y $b$ son impares.
+    </li>
+
+    <li>
+      Si $a^2>b^2$, entonces $a>b$.
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Se sabe que $p\to q$ es falsa.
+  </p>
+
+  <p>Determina, sin construir una tabla de verdad completa:</p>
+
+  <ol class="two-column">
+    <li>el valor de verdad de $p$;</li>
+    <li>el valor de verdad de $q$;</li>
+    <li>el valor de verdad de $\neg p\lor q$;</li>
+    <li>el valor de verdad de $q\to p$;</li>
+    <li>el valor de verdad de $\neg q\to\neg p$.</li>
+  </ol>
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- TEMA: BICONDICIONAL -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Bicondicional</h1>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Determina el valor de verdad de cada bicondicional.</p>
+
+  <ol class="two-column">
+    <li>
+      $24$ es par si y sólo si $24^2$ es par.
+    </li>
+
+    <li>
+      $9$ es primo si y sólo si $9$ es impar.
+    </li>
+
+    <li>
+      $15$ es divisible entre $3$ si y sólo si $15$ es divisible entre $5$.
+    </li>
+
+    <li>
+      $11$ es compuesto si y sólo si $12$ es impar.
+    </li>
+
+    <li>
+      $25$ es un cuadrado perfecto si y sólo si $\sqrt{25}$ es un número entero.
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Reescribe cada bicondicional utilizando únicamente implicaciones,
+    conjunciones y negaciones cuando sea necesario.
+  </p>
+
+  <ol class="two-column">
+    <li>$p\leftrightarrow q$</li>
+    <li>$p\leftrightarrow\neg q$</li>
+    <li>$(p\land q)\leftrightarrow r$</li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Se sabe que
+  </p>
+
+  $$(p\lor q)\leftrightarrow r$$
+
+  <p>es falsa.</p>
+
+  <ol class="two-column">
+    <li>
+      Si $r$ es verdadera, ¿qué puedes concluir acerca de $p$ y $q$?
+    </li>
+
+    <li>
+      Si $r$ es falsa, ¿qué debe ocurrir con $p\lor q$?
+    </li>
+
+    <li>
+      Encuentra todas las combinaciones de valores de verdad de $p$, $q$ y $r$
+      para las cuales el bicondicional es falso.
+    </li>
+  </ol>
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- TEMA: CONJETURAS -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Conjeturas</h1>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Para cada una de las siguientes afirmaciones:
+  </p>
+
+  <ol>
+    <li>calcula varios casos particulares;</li>
+    <li>decide si los ejemplos sugieren que la afirmación puede ser verdadera;</li>
+    <li>determina finalmente si es verdadera o falsa;</li>
+    <li>si es falsa, encuentra un contraejemplo;</li>
+    <li>si consideras que es verdadera, explica cómo podría justificarse.</li>
+  </ol>
+
+  <ol class="two-column">
+    <li>
+      Para todo número natural $n$, el número $n^2+n+2$ es par.
+    </li>
+
+    <li>
+      Para todo número natural $n$, el número $2^n+1$ es primo.
+    </li>
+
+    <li>
+      Para todo número entero $n$, el número $n^2-n$ es par.
+    </li>
+
+    <li>
+      Para todo número natural $n$, el número $n^2+n+17$ es primo.
+    </li>
+
+    <li>
+      La suma de tres números impares siempre es impar.
+    </li>
+
+    <li>
+      El producto de dos números consecutivos siempre es par.
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Observa los siguientes valores:</p>
+
+  $$1^3-1=0,$$
+  $$2^3-2=6,$$
+  $$3^3-3=24,$$
+  $$4^3-4=60,$$
+  $$5^3-5=120.$$
+
+  <ol class="two-column">
+    <li>¿Qué propiedad común observas en los resultados?</li>
+    <li>Formula una conjetura válida para todo número natural $n$.</li>
+    <li>Comprueba la conjetura para $n=6,7,8$.</li>
+    <li>
+      ¿Estas comprobaciones son suficientes para asegurar que la conjetura
+      es verdadera para todo $n$? Explica.
+    </li>
+  </ol>
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- TEMA: CONTRAEJEMPLOS -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Contraejemplos</h1>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Cada una de las siguientes afirmaciones es falsa.
+    Encuentra un contraejemplo que lo demuestre.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      Si $n^2$ es divisible entre $9$, entonces $n$ es divisible entre $9$.
+    </li>
+
+    <li>
+      Si $ab$ es par, entonces $a$ y $b$ son pares.
+    </li>
+
+    <li>
+      Para todos los números reales $a$ y $b$,
+      $$|a+b|=|a|+|b|.$$
+    </li>
+
+    <li>
+      Si $a^2>b^2$, entonces $a>b$.
+    </li>
+
+    <li>
+      La suma de dos números primos siempre es par.
+    </li>
+
+    <li>
+      Para todo número real $x$,
+      $$x^2\geq x.$$
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Para cada afirmación, decide primero qué características debería tener
+    un contraejemplo. Después intenta encontrar uno.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      Todo número impar es primo.
+    </li>
+
+    <li>
+      Todo número divisible entre $3$ es divisible entre $6$.
+    </li>
+
+    <li>
+      Si la suma de dos enteros es impar, entonces ambos enteros son impares.
+    </li>
+
+    <li>
+      Si $a<b$, entonces $a^2<b^2$.
+    </li>
+
+    <li>
+      Si dos números tienen el mismo cuadrado, entonces son iguales.
+    </li>
+  </ol>
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- TEMA: TABLAS DE VERDAD -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Tablas de verdad</h1>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Construye la tabla de verdad completa de cada proposición.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      $$(p\land q)\to p$$
+    </li>
+
+    <li>
+      $$p\to(q\lor p)$$
+    </li>
+
+    <li>
+      $$\neg(p\land q)\leftrightarrow(\neg p\lor\neg q)$$
+    </li>
+
+    <li>
+      $$(p\to q)\land(q\to p)$$
+    </li>
+
+    <li>
+      $$[(p\lor q)\land\neg p]\to q$$
+    </li>
+  </ol>
+
+  <p>
+    En cada caso indica además si la proposición es una
+    <strong>tautología</strong>, una <strong>contradicción</strong>
+    o una <strong>contingencia</strong>.
+  </p>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Construye la tabla de verdad de cada proposición con tres variables.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      $$[p\land(q\to r)]\to(p\land r)$$
+    </li>
+
+    <li>
+      $$[(p\to q)\land(q\to r)]\to(p\to r)$$
+    </li>
+
+    <li>
+      $$(p\lor q)\to(q\lor r)$$
+    </li>
+
+    <li>
+      $$[p\to(q\land r)]\leftrightarrow[(p\to q)\land(p\to r)]$$
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Sin construir inicialmente toda la tabla de verdad, intenta determinar
+    si cada expresión puede ser falsa. Después verifica tu razonamiento
+    mediante una tabla de verdad.
+  </p>
+
+  <ol class="two-column">
+    <li>$p\lor\neg p$</li>
+    <li>$p\land\neg p$</li>
+    <li>$(p\land q)\to p$</li>
+    <li>$p\to(p\lor q)$</li>
+    <li>$(p\to q)\lor(q\to p)$</li>
+  </ol>
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- TEMA: EQUIVALENCIAS LÓGICAS -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Equivalencias lógicas</h1>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Simplifica las siguientes expresiones utilizando equivalencias lógicas.
+    Justifica cada transformación.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      $$\neg(\neg p\lor q)$$
+    </li>
+
+    <li>
+      $$\neg(p\to q)$$
+    </li>
+
+    <li>
+      $$\neg[p\land(q\lor r)]$$
+    </li>
+
+    <li>
+      $$(p\to q)\land(p\to r)$$
+    </li>
+
+    <li>
+      $$(p\to r)\lor(q\to r)$$
+    </li>
+
+    <li>
+      $$\neg[(p\lor q)\to r]$$
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Determina si cada pareja de proposiciones es lógicamente equivalente.
+    Puedes utilizar equivalencias conocidas o construir una tabla de verdad.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      $$p\to q
+      \qquad\text{y}\qquad
+      \neg p\lor q$$
+    </li>
+
+    <li>
+      $$\neg(p\land q)
+      \qquad\text{y}\qquad
+      \neg p\land\neg q$$
+    </li>
+
+    <li>
+      $$\neg(p\lor q)
+      \qquad\text{y}\qquad
+      \neg p\land\neg q$$
+    </li>
+
+    <li>
+      $$p\leftrightarrow q
+      \qquad\text{y}\qquad
+      (p\to q)\land(q\to p)$$
+    </li>
+
+    <li>
+      $$p\to(q\land r)
+      \qquad\text{y}\qquad
+      (p\to q)\land(p\to r)$$
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Demuestra mediante equivalencias lógicas las siguientes identidades.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      $$\neg(p\to q)\equiv p\land\neg q.$$
+    </li>
+
+    <li>
+      $$p\to(q\land r)
+      \equiv
+      (p\to q)\land(p\to r).$$
+    </li>
+
+    <li>
+      $$(p\to r)\land(q\to r)
+      \equiv
+      (p\lor q)\to r.$$
+    </li>
+
+    <li>
+      $$p\leftrightarrow q
+      \equiv
+      (p\land q)\lor(\neg p\land\neg q).$$
+    </li>
+
+    <li>
+      $$\neg(p\leftrightarrow q)
+      \equiv
+      (p\land\neg q)\lor(\neg p\land q).$$
+    </li>
+  </ol>
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- EJERCICIOS INTEGRADORES -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Ejercicios integradores</h1>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Sean las proposiciones:</p>
+
+  $$p:\text{ $n$ es múltiplo de $4$},$$
+  $$q:\text{ $n$ es par},$$
+  $$r:\text{ $n$ es múltiplo de $8$}.$$
+
+  <p>Para cada una de las siguientes expresiones:</p>
+
+  <ol>
+    <li>escríbela con palabras;</li>
+    <li>decide si es verdadera para todo número entero $n$;</li>
+    <li>si no lo es, encuentra un contraejemplo.</li>
+  </ol>
+
+  <ol class="two-column">
+    <li>$p\to q$</li>
+    <li>$q\to p$</li>
+    <li>$r\to p$</li>
+    <li>$p\leftrightarrow q$</li>
+    <li>$(r\to p)\land(p\to q)$</li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Considera la siguiente afirmación:
+  </p>
+
+  <p>
+    <em>
+      ``Si un número entero es par y divisible entre $3$, entonces es divisible
+      entre $6$.''
+    </em>
+  </p>
+
+  <ol class="two-column">
+    <li>Identifica las proposiciones simples que intervienen.</li>
+    <li>Escribe la afirmación usando notación lógica.</li>
+    <li>Explica qué tendría que ocurrir para que la afirmación fuera falsa.</li>
+    <li>Busca un posible contraejemplo.</li>
+    <li>Decide finalmente si la afirmación es verdadera o falsa.</li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Una persona afirma:
+  </p>
+
+  <p>
+    <em>
+      ``Si estudio, apruebo. No aprobé. Por lo tanto, no estudié.''
+    </em>
+  </p>
+
+  <p>Sean</p>
+
+  $$p:\text{ Estudié},\qquad q:\text{ Aprobé}.$$
+
+  <ol class="two-column">
+    <li>Escribe las dos premisas utilizando $p$ y $q$.</li>
+    <li>Escribe la conclusión utilizando $p$ y $q$.</li>
+    <li>
+      Analiza mediante valores de verdad si puede ocurrir que las premisas
+      sean verdaderas y la conclusión falsa.
+    </li>
+    <li>
+      Explica, a partir de tu análisis, si la conclusión se sigue de las premisas.
+    </li>
+  </ol>
+</div>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Identifica las proposiciones simples que forman cada proposición compuesta
+    e indica el conectivo lógico principal.
+  </p>
+
+  <ol class="two-column">
+    <li>$8$ es par y $8$ es primo.</li>
+    <li>Si $12$ es divisible entre $4$, entonces $12$ es divisible entre $2$.</li>
+    <li>$5$ no es par o $5>10$.</li>
+    <li>$7$ es primo si y sólo si tiene exactamente dos divisores positivos.</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Considera las siguientes proposiciones:</p>
+
+  $$p:\text{ El examen es difícil},$$
+  $$q:\text{ Estudio para el examen},$$
+  $$r:\text{ Apruebo el examen}.$$
+
+  <p>Escribe con palabras el significado de las siguientes expresiones:</p>
+
+  <ol class="two-column">
+    <li>$(q\land \neg p)\to r$</li>
+    <li>$\neg q\lor p$</li>
+    <li>$r\leftrightarrow q$</li>
+    <li>$q\land(p\to r)$</li>
+  </ol>
+
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- TEMA: VALOR DE VERDAD -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Valor de verdad de una proposición lógica</h1>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Determina si cada una de las siguientes proposiciones es
+    <strong>verdadera</strong> o <strong>falsa</strong>.
+  </p>
+
+  <ol class="two-column">
+    <li>$11$ es un número primo.</li>
+    <li>$18$ es un número impar.</li>
+    <li>$3^2+4^2=5^2$.</li>
+    <li>$17$ es divisible entre $3$.</li>
+    <li>$\sqrt{49}=7$.</li>
+    <li>$2^5=64$.</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Sean las proposiciones:</p>
+
+  $$p:\text{ ``$12$ es par''},\qquad
+    q:\text{ ``$12$ es primo''},\qquad
+    r:\text{ ``$12$ es divisible entre $3$''}.$$
+
+  <p>Determina el valor de verdad de cada expresión.</p>
+
+  <ol class="two-column">
+    <li>$p\land q$</li>
+    <li>$p\lor q$</li>
+    <li>$\neg q$</li>
+    <li>$q\to r$</li>
+    <li>$p\to r$</li>
+    <li>$p\leftrightarrow r$</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Sin construir una tabla de verdad completa, analiza las siguientes
+    proposiciones y determina su valor de verdad.
+  </p>
+
+  <ol class="two-column">
+    <li>Si $9$ es par, entonces $15$ es múltiplo de $5$.</li>
+    <li>Si $8$ es impar, entonces $10$ es primo.</li>
+    <li>$13$ es primo si y sólo si $4$ es par.</li>
+    <li>No es cierto que $5$ sea primo y $8$ sea impar.</li>
+    <li>Si $2+2=5$, entonces $7<10$.</li>
+  </ol>
+
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- TEMA: NEGACIÓN -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Negación</h1>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Escribe la negación de cada una de las siguientes proposiciones.</p>
+
+  <ol class="two-column">
+    <li>$15$ es impar.</li>
+    <li>$8>3$.</li>
+    <li>$17$ es primo.</li>
+    <li>María estudia Actuaría.</li>
+    <li>El examen será mañana.</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Escribe una negación equivalente para cada proposición.
+    Procura que la negación quede aplicada directamente a las
+    proposiciones simples.
+  </p>
+
+  <ol class="two-column">
+    <li>$2$ es par y $9$ es primo.</li>
+    <li>$7>3$ o $4=5$.</li>
+    <li>Si $10$ es divisible entre $5$, entonces $10$ es par.</li>
+    <li>$6$ es par si y sólo si $9$ es impar.</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Simplifica las siguientes negaciones utilizando equivalencias lógicas.
+  </p>
+
+  <ol class="two-column">
+    <li>$\neg\bigl(p\lor(q\land r)\bigr)$</li>
+    <li>$\neg\bigl((p\to q)\land r\bigr)$</li>
+    <li>$\neg(p\leftrightarrow q)$</li>
+  </ol>
+
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- TEMA: DISYUNCIÓN -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Disyunción</h1>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Determina el valor de verdad de cada disyunción.</p>
+
+  <ol class="two-column">
+    <li>$4$ es par o $7$ es primo.</li>
+    <li>$9$ es par o $10$ es primo.</li>
+    <li>$8<3$ o $5<12$.</li>
+    <li>$6$ es impar o $11$ es compuesto.</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Sean $p=V$, $q=F$ y $r=V$.
+    Determina el valor de verdad de cada expresión.
+  </p>
+
+  <ol class="two-column">
+    <li>$p\lor q$</li>
+    <li>$q\lor r$</li>
+    <li>$q\lor\neg r$</li>
+    <li>$(p\lor q)\lor\neg r$</li>
+    <li>$\neg p\lor(q\lor r)$</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Determina qué condiciones deben cumplirse para que cada expresión sea falsa.
+  </p>
+
+  <ol class="two-column">
+    <li>$p\lor q$</li>
+    <li>$p\lor\neg q$</li>
+    <li>$(p\land q)\lor r$</li>
+    <li>$\neg p\lor(q\land r)$</li>
+  </ol>
+
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- TEMA: CONJUNCIÓN -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Conjunción</h1>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Determina el valor de verdad de cada conjunción.</p>
+
+  <ol class="two-column">
+    <li>$8$ es par y $13$ es primo.</li>
+    <li>$5>2$ y $7<3$.</li>
+    <li>$12$ es múltiplo de $3$ y de $4$.</li>
+    <li>$9$ es primo y $10$ es par.</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Sean $p=F$, $q=V$ y $r=V$.
+    Determina el valor de verdad de cada expresión.
+  </p>
+
+  <ol class="two-column">
+    <li>$p\land q$</li>
+    <li>$q\land r$</li>
+    <li>$\neg p\land q$</li>
+    <li>$(p\lor q)\land r$</li>
+    <li>$p\land(q\lor r)$</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Determina qué condiciones deben cumplirse para que cada expresión sea verdadera.
+  </p>
+
+  <ol class="two-column">
+    <li>$p\land q$</li>
+    <li>$p\land\neg q$</li>
+    <li>$(p\lor q)\land r$</li>
+    <li>$p\land(q\to r)$</li>
+  </ol>
+
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- TEMA: IMPLICACIÓN -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Implicación</h1>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Determina el valor de verdad de cada implicación.</p>
+
+  <ol class="two-column">
+    <li>Si $8$ es par, entonces $8^2$ es par.</li>
+    <li>Si $9$ es par, entonces $9$ es múltiplo de $3$.</li>
+    <li>Si $7$ es primo, entonces $7$ es par.</li>
+    <li>Si $10$ es impar, entonces $15$ es primo.</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Considera la afirmación:</p>
+
+  <p>
+    <em>
+      ``Si un número es múltiplo de $6$, entonces es múltiplo de $3$.''
+    </em>
+  </p>
+
+  <p>
+    Analiza la implicación utilizando cada uno de los siguientes números:
+  </p>
+
+  $$n=12,\qquad n=9,\qquad n=10,\qquad n=18.$$
+
+  <p>
+    Para cada caso identifica el valor de verdad del antecedente,
+    del consecuente y de la implicación.
+  </p>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Responde y justifica cada una de las siguientes preguntas.</p>
+
+  <ol class="two-column">
+    <li>¿En qué único caso una implicación $p\to q$ es falsa?</li>
+    <li>Escribe $p\to q$ utilizando únicamente negación y disyunción.</li>
+    <li>Escribe la negación de $p\to q$ sin utilizar el símbolo $\to$.</li>
+    <li>
+      Encuentra un contraejemplo para la afirmación:
+      ``Si un número natural es divisible entre $4$,
+      entonces es divisible entre $8$''.
+    </li>
+  </ol>
+
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- TEMA: BICONDICIONAL -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Bicondicional</h1>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Determina el valor de verdad de cada bicondicional.</p>
+
+  <ol class="two-column">
+    <li>$8$ es par si y sólo si $10$ es par.</li>
+    <li>$7$ es primo si y sólo si $9$ es primo.</li>
+    <li>$4>2$ si y sólo si $8<3$.</li>
+    <li>$15$ es par si y sólo si $21$ es par.</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Sean $p$, $q$ y $r$ proposiciones con $p=V$, $q=F$ y $r=F$.
+    Determina el valor de verdad de:
+  </p>
+
+  <ol class="two-column">
+    <li>$p\leftrightarrow q$</li>
+    <li>$q\leftrightarrow r$</li>
+    <li>$p\leftrightarrow\neg q$</li>
+    <li>$(p\land q)\leftrightarrow r$</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Completa las siguientes equivalencias.</p>
+
+  <ol class="two-column">
+    <li>$p\leftrightarrow q\equiv (\;\_\_\_\;)\land(\;\_\_\_\;)$</li>
+    <li>$p\leftrightarrow q\equiv(p\land q)\lor(\;\_\_\_\;)$</li>
+    <li>$\neg(p\leftrightarrow q)\equiv(\;\_\_\_\;)\lor(\;\_\_\_\;)$</li>
+  </ol>
+
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- TEMA: CONJETURAS -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Conjeturas</h1>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Observa los primeros casos y formula una conjetura para cada patrón.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      $$1=1^2,\qquad 1+3=2^2,\qquad 1+3+5=3^2.$$
+    </li>
+
+    <li>
+      $$2=1(1+1),\qquad
+        6=2(2+1),\qquad
+        12=3(3+1),\qquad
+        20=4(4+1).$$
+    </li>
+
+    <li>
+      $$1,4,9,16,25,\ldots$$
+    </li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Calcula $n^2+n$ para</p>
+
+  $$n=1,2,3,4,5,6.$$
+
+  <ol class="two-column">
+    <li>¿Qué patrón observas?</li>
+    <li>Formula una conjetura.</li>
+    <li>
+      ¿Verificar estos seis casos demuestra que la conjetura
+      es verdadera para todo número natural $n$?
+    </li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Considera la expresión</p>
+
+  $$n^2+n+41.$$
+
+  <p>
+    Calcula su valor para algunos números naturales pequeños y plantea
+    una conjetura sobre los resultados. Después prueba con $n=40$.
+  </p>
+
+  <ol class="two-column">
+    <li>¿Qué conjetura parece surgir de los primeros casos?</li>
+    <li>¿Qué ocurre cuando $n=40$?</li>
+    <li>¿Qué enseñanza deja este ejemplo sobre las conjeturas?</li>
+  </ol>
+
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- TEMA: CONTRAEJEMPLOS -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Contraejemplos</h1>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Encuentra un contraejemplo para cada afirmación.</p>
+
+  <ol class="two-column">
+    <li>Todo número primo es impar.</li>
+    <li>Para todo número natural $n$, $n^2+n$ es impar.</li>
+    <li>Todo múltiplo de $6$ es múltiplo de $4$.</li>
+    <li>Para todo número real $x$, se cumple $x^2>x$.</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Determina cuáles de las siguientes afirmaciones son falsas.
+    Para cada afirmación falsa, encuentra un contraejemplo.
+  </p>
+
+  <ol class="two-column">
+    <li>Si un número es múltiplo de $10$, entonces es par.</li>
+    <li>Si un número es par, entonces es múltiplo de $4$.</li>
+    <li>Si $a+b$ es par, entonces $a$ y $b$ son pares.</li>
+    <li>Si un número es divisible entre $12$, entonces es divisible entre $3$.</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Refuta cada una de las siguientes afirmaciones mediante un contraejemplo.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      Si $n^2$ es divisible entre $4$, entonces $n$ es divisible entre $4$.
+    </li>
+    <li>Si $a^2=b^2$, entonces $a=b$.</li>
+    <li>Si $ab=0$, entonces $a=0$ y $b=0$.</li>
+    <li>
+      Si $p\to q$ es verdadera, entonces $q\to p$ también es verdadera.
+    </li>
+  </ol>
+
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- TEMA: TABLAS DE VERDAD -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Tablas de verdad</h1>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Construye una tabla de verdad que contenga las siguientes columnas:
+  </p>
+
+  $$p,\qquad q,\qquad \neg p,\qquad p\land q,\qquad p\lor q.$$
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Construye la tabla de verdad de la siguiente proposición:</p>
+
+  $$(p\lor q)\to p.$$
+
+  <p>Después indica en qué casos la proposición es falsa.</p>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Construye la tabla de verdad de la proposición</p>
+
+  $$[(p\to q)\land(q\to r)]\to(p\to r).$$
+
+  <p>Después responde:</p>
+
+  <ol class="two-column">
+    <li>¿Puede ser falsa?</li>
+    <li>¿Es una tautología, una contradicción o una contingencia?</li>
+    <li>¿Qué idea lógica expresa esta proposición?</li>
+  </ol>
+
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- TEMA: EQUIVALENCIAS LÓGICAS -->
+<!-- ========================================================= -->
+
+<h1 class="tema-number-title">Equivalencias lógicas</h1>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>Completa las siguientes equivalencias lógicas.</p>
+
+  <ol class="two-column">
+    <li>$\neg(\neg p)\equiv\;\_\_\_\;$</li>
+    <li>$p\to q\equiv\;\_\_\_\;$</li>
+    <li>$\neg(p\land q)\equiv\;\_\_\_\;$</li>
+    <li>$\neg(p\lor q)\equiv\;\_\_\_\;$</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Simplifica cada expresión utilizando equivalencias lógicas.
+  </p>
+
+  <ol class="two-column">
+    <li>$\neg(p\to q)$</li>
+    <li>$\neg(\neg p\lor q)$</li>
+    <li>$(p\to q)\land(p\to r)$</li>
+    <li>$\neg(p\land\neg q)$</li>
+  </ol>
+
+
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Demuestra, utilizando equivalencias lógicas o una tabla de verdad,
+    cada una de las siguientes afirmaciones.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      $$[(p\to q)\land(p\to\neg q)]\equiv\neg p.$$
+    </li>
+
+    <li>
+      $$p\leftrightarrow q
+      \equiv(p\land q)\lor(\neg p\land\neg q).$$
+    </li>
+
+    <li>
+      $$(p\to q)\lor(q\to p)$$
+      es una tautología.
+    </li>
+  </ol>
+
+
 </div>
 
 
