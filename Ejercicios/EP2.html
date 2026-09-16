@@ -630,73 +630,65 @@
   </ol>
 </div> -->
 <div class="ejercicio-box">
-  <h1 class="title-practica">Ejemplo resuelto</h1>
+<h1 class="title-practica">Ejemplo resuelto</h1>
+
+<p>
+  Construye una demostración formal que permita obtener la conclusión
+  a partir de las premisas dadas.
+</p>
+
+$$
+  \neg(p\lor q),\qquad r\to p
+  \qquad\therefore\qquad \neg r
+$$
+
+<button class="respButton hvr-grow"> Demostración </button>
+
+<div class="resp-box flexbox">
 
   <p>
-    Construye una demostración formal que permita obtener la conclusión
-    a partir de las premisas dadas.
+    Una posible demostración formal es la siguiente:
   </p>
 
-  $$
-    \neg(p\lor q),\qquad r\to p
-    \qquad\therefore\qquad \neg r
-  $$
+  <p>
+    <span class="paso-numero">1</span>
+    $\neg(p\lor q)$
+    &nbsp;&nbsp; \\\ &nbsp;&nbsp;
+    Premisa.
+  </p>
 
-  <button class="respButton hvr-grow"> Demostración </button>
+  <p>
+    <span class="paso-numero">2</span>
+    $r\to p$
+    &nbsp;&nbsp; \\\ &nbsp;&nbsp;
+    Premisa.
+  </p>
 
-  <div class="resp-box flexbox">
+  <p>
+    <span class="paso-numero">3</span>
+    $\neg p\land\neg q$
+    &nbsp;&nbsp; \\\ &nbsp;&nbsp;
+    Ley de De Morgan aplicada al paso 1:
+    $\neg(p\lor q)\equiv\neg p\land\neg q$.
+  </p>
 
-    <p>
-      Una posible demostración formal es la siguiente:
-    </p>
+  <p>
+    <span class="paso-numero">4</span>
+    $\neg p$
+    &nbsp;&nbsp; \\\ &nbsp;&nbsp;
+    Regla de inferencia aplicada al paso 3:
+    $\neg p\land\neg q\;\therefore\;\neg p$.
+  </p>
 
-    <p>
-      <span class="paso-numero">1</span>
-      $\neg(p\lor q)$
-      &nbsp;&nbsp; \\\ &nbsp;&nbsp;
-      Premisa.
-    </p>
+  <p>
+    <span class="paso-numero">5</span>
+    $\neg r$
+    &nbsp;&nbsp; \\\ &nbsp;&nbsp;
+    Modus Tollens aplicado a los pasos 2 y 4:
+    $r\to p,\;\neg p\;\therefore\;\neg r$.
+  </p>
 
-    <p>
-      <span class="paso-numero">2</span>
-      $r\to p$
-      &nbsp;&nbsp; \\\ &nbsp;&nbsp;
-      Premisa.
-    </p>
-
-    <p>
-      <span class="paso-numero">3</span>
-      $\neg p\land\neg q$
-      &nbsp;&nbsp; \\\ &nbsp;&nbsp;
-      Ley de De Morgan:
-      $\neg(p\lor q)\equiv\neg p\land\neg q$.
-    </p>
-
-    <p>
-      <span class="paso-numero">4</span>
-      $\neg p$
-      &nbsp;&nbsp; \\\ &nbsp;&nbsp;
-      Regla de inferencia:
-      $\neg p\land\neg q\;\therefore\;\neg p$.
-    </p>
-
-    <p>
-      <span class="paso-numero">5</span>
-      $\neg r$
-      &nbsp;&nbsp; \\\ &nbsp;&nbsp;
-      Modus Tollens:
-      $r\to p,\;\neg p\;\therefore\;\neg r$.
-    </p>
-
-    <!-- <p style="margin-top: 15px;">
-      En el paso 3 se utiliza la Ley de De Morgan para transformar la
-      primera premisa. A partir de $\neg p\land\neg q$, se obtiene
-      $\neg p$ mediante la Regla de Simplificación. Finalmente, las
-      proposiciones $r\to p$ y $\neg p$ permiten aplicar Modus Tollens
-      y concluir $\neg r$.
-    </p> -->
-
-  </div>
+</div>
 </div>
 
 <div class="ejercicio-box">
