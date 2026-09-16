@@ -21,38 +21,24 @@
       window.MathJax = {
         tex: {
           macros: {
-            sen: "\\operatorname{sen}",
-            seg: ["\\overrightarrow{#1}", 1],
-            id: "\\operatorname{id}",
+            sen: "\\\operatorname{sen}",
+            seg: ["\\\overrightarrow{#1}", 1],
+            id: "\\\operatorname{id}",
           },
           tags: "ams", /* this part is for numbered equations */
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
+          inlineMath: [['$', '$'], ['\\\(', '\\\)']]
         }
       };
     </script>
 
-    <script>
-  function toggleRespuestas(btn) {
-    var respuestas = btn.nextElementSibling;
-    if (respuestas.style.display === "none" || respuestas.style.display === "") {
-      respuestas.style.display = "block";
-      btn.textContent = "Ocultar Respuestas";
-    } else {
-      respuestas.style.display = "none";
-      btn.textContent = "Mostrar Respuestas";
-    }
-  }
-</script>
-
-    
-    <!-- This part restart counter of cards to start at n+1 -->
+<!-- This part restart counter of cards to start at n+1 -->
     <style>
       /* body.number-title
       {
       counter-reset: temaCounter 1 subsectioncounter ;
       } */
       body.fondo-body{
-        counter-reset: temaCounter 1 sectionCounter;
+        counter-reset: temaCounter 2 sectionCounter;
       }
 
       /* h1.page-number-title
@@ -73,8 +59,6 @@
 
     </style>
 
-
-  
     <!-- Top Menu  -->
     
       
@@ -120,122 +104,935 @@
 </head>  
 
 <body class="fondo-body" ><h1 class="page-title-practica"> Ejercicios propuestos primer examen parcial</h1>   
-<!-- <div class="definicion-box">
-  <h1 class="title-practica">Definición (Integral de Lebesgue de una Variable Aleatoria No Negativa)</h1>
-  
-  <p>Sea $(\Omega, \mathcal{F}, \mathbb{P})$ un espacio de probabilidad y sea $X: \Omega \to [0, \infty]$ una variable aleatoria no negativa.</p>
-  
-  <p>Para construir la integral de Lebesgue  de $X$, primero consideramos las <strong>variables aleatorias simples no negativas</strong>. Una variable aleatoria simple 
-    $S\colon \Omega \to \mathbb{R}$ es aquella que toma un número finito de valores $c_1, c_2, \dots, c_n$, y se puede expresar como una combinación lineal de funciones 
-    indicadoras:</p>
-  
-  $$ S = \sum_{i=1}^{n} c_i \mathbf{1}_{A_i} $$
-  
-  <p>donde los conjuntos $A_i \in \mathcal{F}$ forman una partición del espacio muestral $\Omega$. Se define la <strong> integral de Lebesgue de $S$ con respecto a $\mathbb{P}$</strong> 
-    de manera natural como:</p>
+<!-- ========================================================= -->
+<!-- TEMA: CUANTIFICADORES -->
+<!-- ========================================================= -->
 
-  $$ \displaystyle \int_{\Omega} S d\mathbb{P} = \sum_{i=1}^{n} c_i \mathbb{P}(A_i) $$
+<!-- <h1 class="tema-number-title">Cuantificadores</h1> -->
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
 
-  <p>La <strong>integral de Lebesgue de la variable aleatoria no negativa $X$ con respecto a $\mathbb{P}$</strong>
-    se define formalmente como:</p>
-  
-  $$ \displaystyle \int_{\Omega} X d\mathbb{P} = \sup \left\{ \displaystyle \int_{\Omega} S d\mathbb{P} : S \text{ es una variable aleatoria simple y } 0 \le S \le X,  \right\} $$
-  
-  <p><b>Observación:</b> De esta definición se tiene que el valor de esta integral puede ser infinito.</p>
+  <p>
+    Para cada una de las siguientes proposiciones lógicas:
+  </p>
+
+  <ul>
+    <li>
+      Determina su valor de verdad y justifica tu respuesta. Si una proposición
+      lógica con cuantificador universal es falsa, proporciona un contraejemplo;
+      si una proposición lógica con cuantificador existencial es verdadera,
+      proporciona un ejemplo que verifique la proposición lógica;
+    </li>
+
+    <li>
+      Escribe su negación y simplifica la expresión resultante de manera que
+      ningún símbolo de negación quede aplicado directamente a un cuantificador.
+    </li>
+  </ul>
+
+  <ol class="two-column">
+     <li>
+      $\forall n\in\mathbb{N} \,\colon\, n+1>n$.
+    </li>
+
+    <li>
+      $\exists x\in\mathbb{R} \,\colon\, x^2=5$.
+    </li>
+
+    <li>
+      $\forall n\in\mathbb{Z} \,\colon\, n^2>n$.
+    </li>
+
+    <li>
+      $\exists n\in\mathbb{Z} \,\colon\, n^2< 0$.
+    </li>
+
+    <li>
+      $\forall n\in\mathbb{Z} \,\colon\,
+      (n\text{ es par}\to n^2\text{ es par})$.
+    </li>
+
+    <li>
+      $\exists n\in\mathbb{N} \,\colon\,
+      (n\text{ es primo}\land n\text{ es par}\land n>2)$.
+    </li>
+
+    <li>
+      $\forall x\in\mathbb{R} \,\colon\, \sqrt{x^2}=x$.
+    </li>
+
+    <li>
+      $\exists x\in\mathbb{R} \,\colon\, x^3< x^2 < x$.
+    </li>
+
+    <li>
+      $\forall n\in\mathbb{Z} \,\colon\,
+      n^3-n\text{ es múltiplo de }3$.
+    </li>
+
+    <li>
+      $\exists x\in\mathbb{Q} \,\colon\, x^2=2$.
+    </li>
+
+    <li>
+      $\forall x\in\mathbb{R} \,\colon\,
+      x^2-4x+5>0$.
+    </li>
+
+    <li>
+      $\exists n\in\mathbb{N} \,\colon\,
+      n^2+n+11\text{ no es un número primo}$.
+    </li>
+
+    <li>
+      $\forall a,b\in\mathbb{R} \,\colon\,
+      |a+b|=|a|+|b|$.
+    </li>
+
+    <li>
+      $\exists x\in\mathbb{R} \,\colon\,
+      x>0\land x+\frac{1}{x}< 2$.
+    </li>
+  </ol>
+</div>
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Expresa cada una de las siguientes afirmaciones en lenguaje simbólico,
+    utilizando cuantificadores, conectivos lógicos y la notación matemática
+    apropiada. Especifica claramente el conjunto sobre el que se cuantifica.
+  </p>
+
+  <ol>
+    <li>
+      Todo número entero par tiene cuadrado par.
+    </li>
+
+    <li>
+      Existe al menos un número natural que es primo y par.
+    </li>
+
+    <li>
+      Todo número entero divisible entre $12$ es divisible entre $3$.
+    </li>
+
+    <li>
+      Existe al menos un número real cuyo cuadrado es igual a $16$.
+    </li>
+
+    <li>
+      Ningún número entero impar es divisible entre $2$.
+    </li>
+
+    <li>
+      No todos los números naturales son primos.
+    </li>
+
+    <li>
+      Existe al menos un número entero divisible entre $4$ y entre $6$.
+    </li>
+    <li>
+      La suma de dos números enteros impares cualesquiera es siempre un número entero par.
+    </li>
+
+    <li>
+      Para todo número real positivo, existe un número real positivo estrictamente menor.
+    </li>
+
+    <li>
+      Entre cualesquiera dos números reales distintos, existe al menos un número racional.
+    </li>
+
+    <li>
+      No todos los números reales tienen una raíz cuadrada en los números reales.
+    </li>
+
+    <li>
+      Si un número entero es divisible entre 2 y entre 3, entonces es divisible entre 6.
+    </li>
+
+    <li>
+      Para todo número natural, existe un número primo que es estrictamente mayor que él.
+    </li>
+
+    <li>
+      El cuadrado de cualquier número real es igual a cero si y solo si el número original es cero.
+    </li>
+  </ol>
 </div>
 
-<div class="definicion-box">
-  <h1 class="title-practica">Definición (Integral de Lebesgue de una variable aleatoria)</h1>
-  
-  <p>Sea $(\Omega, \mathcal{F}, \mathbb{P})$ un espacio de probabilidad y sea $X: \Omega \to \mathbb{R}$
-    una variable aleatoria. Para definir la <em>integral de Lebesgue de $X$ con respecto a la medida de probabilidad $\mathbb{P}$</em>,
-    primero descomponemos a $X$ en sus partes <em>positiva</em> y <em>negativa</em>, definidas respectivamente como:
-  
-  <ul class="two-column">
-    <li>$X^+ = \max\{X, 0\}$</li>
-    <li>$X^- = \max\{-X, 0\}$</li>
-  </ul>
-  </p>
-  
-  <p>De modo que $X = X^+ - X^-$ y el valor absoluto es $|X| = X^+ + X^-$. Notemos que ambas variables, $X^+$ y $X^-$, son estrictamente no negativas.</p>
-  
-  <p>La <strong>integral de Lebesgue de la variable aleatoria $X$ con respecto a la medida $\mathbb{P}$</strong> se define como:</p>
-  
-  $$ \displaystyle \int_{\Omega} X d\mathbb{P} = \displaystyle \int_{\Omega} X^+ d\mathbb{P} - \displaystyle \int_{\Omega} X^- d\mathbb{P} $$
-  
-  <p>Si ambas integrales del lado derecho son finitas simultáneamente, se dice que $X$ es una 
-  <strong>variable aleatoria Lebesgue integrable sobre $(\Omega, \mathcal{F}, \mathbb{P})$ </strong> 
+
+<!-- <div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Escribe con palabras el significado de cada una de las siguientes
+    expresiones.
   </p>
 
-  <p>Se denota por 
-    $$\mathcal{L}^{1}(\Omega,\mathcal{F},\mathbb{P})= \left\{X:\Omega\to\mathbb{R}\text{ es una variable aleatoria }  \Big| \displaystyle \int_{\Omega} |X| d\mathbb{P}<\infty\right\}$$
-     al conjunto de variables aleatorias Lebesgue integrables sobre $(\Omega, \mathcal{F}, \mathbb{P})$.
-  </p>
-  <p>  
-  <b>Observación:</b> Dada las relaciones $X = X^+ - X^-$ y $|X| = X^+ + X^-$, 
-    se tiene que $X$ es Lebesgue integrable sobre $(\Omega, \mathcal{F}, \mathbb{P})$ si y solo si $|X|$ es Lebesgue integrable 
-    sobre $(\Omega, \mathcal{F}, \mathbb{P})$.
-  </p>
+  <ol>
+    <li>
+      $\forall n\in\mathbb{Z},\quad
+      (2\mid n\to 2\mid n^2)$.
+    </li>
+
+    <li>
+      $\exists n\in\mathbb{N},\quad
+      (n\text{ es primo}\land n>20)$.
+    </li>
+
+    <li>
+      $\forall x\in\mathbb{R},\quad
+      (x>0\to x^2>0)$.
+    </li>
+
+    <li>
+      $\exists x\in\mathbb{R},\quad
+      x^2-5x+6=0$.
+    </li>
+
+    <li>
+      $\forall n\in\mathbb{Z},\quad
+      (3\mid n\to 3\mid n^2)$.
+    </li>
+  </ol>
 </div> -->
 
+
+<!-- ========================================================= -->
+<!-- TEMA: NEGACIÓN DE PROPOSICIONES CUANTIFICADAS -->
+<!-- ========================================================= -->
+
+<!-- <h1 class="tema-number-title">Negación de proposiciones cuantificadas</h1> -->
+
+<!-- 
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Escribe la negación de cada afirmación utilizando lenguaje cotidiano
+    y después exprésala mediante cuantificadores.
+  </p>
+
+  <ol>
+    <li>
+       Todos los estudiantes resolvieron el ejercicio.
+    </li>
+
+    <li>
+      Algún estudiante obtuvo calificación perfecta.
+    </li>
+
+    <li>
+      Todos los números primos mayores que $2$ son impares.
+    </li>
+
+    <li>
+      Existe un número real cuyo cuadrado es negativo.
+    </li>
+
+    <li>
+      Ningún número natural es negativo.
+    </li>
+  </ol>
+</div> -->
+
+
+<!-- ========================================================= -->
+<!-- TEMA: ORDEN DE LOS CUANTIFICADORES -->
+<!-- ========================================================= -->
+
+<!-- <h1 class="tema-number-title">Orden de los cuantificadores</h1> -->
 
 
 <div class="ejercicio-box">
-  <h1 class="number-title-practica">Ejercicio </h1>
-  <p></p>
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+  Determina el valor de verdad de cada una de las siguientes proposiciones
+  lógicas y justifica tu respuesta. Después, compara los incisos 1 y 2,
+  los incisos 3 y 4, y los incisos 5 y 6. En cada caso, explica cómo cambia
+  el significado de la proposición lógica al intercambiar el orden de los
+  cuantificadores.
+</p>
+  <ol class="two-column">
+    <li>
+      $\forall x\in\mathbb{Z}\;
+      \exists y\in\mathbb{Z} \,\colon\, x \text{ divide a } y$.
+    </li>
+
+    <li>
+      $\exists y\in\mathbb{Z}\;
+      \forall x\in\mathbb{Z} \,\colon\, x \text{ divide a } y$.
+    </li>
+
+    <li>
+      $\exists y\in\mathbb{R}\;
+      \forall x\in\mathbb{R} \,\colon\, x^2 + y \geq 0$.
+    </li>
+
+    <li>
+      $\forall x\in\mathbb{R}\;
+      \exists y\in\mathbb{R} \,\colon\, x^2 + y \geq 0$.
+    </li>
+
+    <li>
+      $\forall x\in\mathbb{R}\;
+      \exists y\in\mathbb{R} \,\colon\, x \cdot y = 1$.
+    </li>
+
+    <li>
+      $\exists y\in\mathbb{R}\;
+      \forall x\in\mathbb{R} \,\colon\, x \cdot y = 1$.
+    </li>
+  </ol>
+</div>
+
+<!-- ========================================================= -->
+<!-- TEMA: EXISTENCIAL ÚNICO -->
+<!-- ========================================================= -->
+
+<!-- <h1 class="tema-number-title">Existencia y unicidad</h1> -->
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Determina el valor de verdad de cada una de las siguientes proposiciones
+    lógicas y justifica tu respuesta. Si la proposición lógica es verdadera,
+    identifica el único elemento que satisface la propiedad. Si es falsa,
+    indica si falla la existencia, la unicidad o ambas.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      $\exists! x\in\mathbb{R} \,\colon\, -(x-2)^2 \geq 0$.
+    </li>
+
+    <li>
+      $\exists! x\in\mathbb{R} \,\colon\, \displaystyle{\frac{x^2-9}{x-3}} = 6$.
+    </li>
+
+    <li>
+      $\exists! x\in\mathbb{Z} \,\colon\, x^2 = x$.
+    </li>
+
+    <li>
+      $\exists! n\in\mathbb{N} \,\colon\,
+      n\text{ es primo}\land n\text{ es par}$.
+    </li>
+
+    <li>
+      $\exists! x\in\mathbb{Q} \,\colon\, x^2 = 2$.
+    </li>
+
+    <li>
+      $\exists! x\in\mathbb{R} \,\colon\, |x| = -x$.
+    </li>
+  </ol>
 </div>
 
 
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
 
-<!-- <div class="teorema-box">
-  <h1 class="title-practica">Teorema (Desigualdades en Espacios $L^p(\Omega, \mathcal{F}, \mathbb{P})$)</h1>
-  
-  <ul>
-    <li><strong>Desigualdad de Hölder:</strong> Sean $p, q > 1$ tales que $\displaystyle{\frac{1}{p} + \frac{1}{q} = 1}$. 
-      Si $X \in L^p(\Omega, \mathcal{F}, \mathbb{P})$ y $Y \in L^q(\Omega, \mathcal{F}, \mathbb{P})$, entonces el producto $XY$ es integrable ($XY \in L^1$) y cumple:
-      $$ \displaystyle \int_{\Omega} |XY| d\mathbb{P} \le \left( \displaystyle \int_{\Omega} |X|^p d\mathbb{P} \right)^{1/p} \left( \displaystyle \int_{\Omega} |Y|^q d\mathbb{P} \right)^{1/q} $$
-      <p><b>Nota:</b> El caso $p=q=2$ corresponde a la <em>Desigualdad de Cauchy-Schwarz</em>.</p>
+  <p>
+    Escribe la negación de cada una de las siguientes proposiciones lógicas
+    que contienen el cuantificador existencial único. Expresa la negación
+    sin utilizar el símbolo $\exists!$.
+  </p>
+
+  <p>
+    <em>Hint:</em> Recuerda que 
+  </p>
+  $$
+    \exists! x\in U \,\colon\, P(x)
+    \;\equiv\;
+    \bigl( \exists x\in U \,\colon\,
+      P(x)  \bigr) \land \left(
+      \forall x,y\in U \,\colon\,
+      \bigl(P(y) \land P(x) \bigr) \implies y=x
+     \right).
+  $$
+
+  <ol class="two-column">
+    <li>
+      $\exists! x\in\mathbb{R} \,\colon\, x+2=7$.
     </li>
 
-    <li><strong>Desigualdad de Minkowski:</strong> Sea $p \ge 1$. Si $X, Y \in L^p(\Omega, \mathcal{F}, \mathbb{P})$, 
-      entonces la suma $X+Y \in L^p(\Omega, \mathcal{F}, \mathbb{P})$ y se satisface la desigualdad triangular para la norma $\|\cdot\|_p$:
-      $$ \left( \displaystyle \int_{\Omega} |X + Y|^p d\mathbb{P} \right)^{1/p} \le \left( \displaystyle \int_{\Omega} |X|^p d\mathbb{P} \right)^{1/p} + \left( \displaystyle \int_{\Omega} |Y|^p d\mathbb{P} \right)^{1/p} $$
-      <p><b>Observación:</b> Esta desigualdad garantiza que el espacio $L^p$ es un espacio vectorial normado.</p>
+    <li>
+      $\exists! x\in\mathbb{R} \,\colon\, x^2=4$.
     </li>
-  </ul>
+
+    <li>
+      $\exists! n\in\mathbb{N} \,\colon\,
+      n\text{ es par}\land n\text{ es primo}$.
+    </li>
+
+    <li>
+      $\exists! x\in\mathbb{Q} \,\colon\, x^2 = 2$.
+    </li>
+  </ol>
+</div>
+
+<!-- ========================================================= -->
+<!-- TEMA: RAZONAMIENTOS LÓGICOS Y VALIDEZ -->
+<!-- ========================================================= -->
+
+<!-- <h1 class="tema-number-title">Razonamientos lógicos y validez</h1> -->
+
+<!-- 
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    En cada razonamiento identifica las premisas y la
+    conclusión. Después escribe su forma lógica.
+  </p>
+
+  <ol>
+    <li>
+      Si un número es múltiplo de $8$, entonces es par.
+      El número $24$ es múltiplo de $8$.
+      Por lo tanto, $24$ es par.
+    </li>
+
+    <li>
+      Si un número es divisible entre $6$, entonces es divisible entre $3$.
+      El número $14$ no es divisible entre $3$.
+      Por lo tanto, $14$ no es divisible entre $6$.
+    </li>
+
+    <li>
+      Si estudio, entonces apruebo.
+      Aprobé.
+      Por lo tanto, estudié.
+    </li>
+
+    <li>
+      Un número entero es par o impar.
+      El número $21$ no es par.
+      Por lo tanto, $21$ es impar.
+    </li>
+  </ol>
+</div> -->
+<!-- 
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Determina cuáles de los siguientes razonamientos son
+    válidos. Si alguno es inválido, proporciona valores
+    de verdad para los cuales las premisas sean verdaderas y la conclusión falsa.
+  </p>
+
+  <ol class="two-columns">
+    <li>
+      $$p\to q,\qquad p\qquad\therefore q.$$
+    </li>
+
+    <li>
+      $$p\to q,\qquad q\qquad\therefore p.$$
+    </li>
+
+    <li>
+      $$p\to q,\qquad\neg q\qquad\therefore\neg p.$$
+    </li>
+
+    <li>
+      $$p\to q,\qquad\neg p\qquad\therefore\neg q.$$
+    </li>
+
+    <li>
+      $$p\lor q,\qquad\neg p\qquad\therefore q.$$
+    </li>
+
+    <li>
+      $$p\land q\qquad\therefore p.$$
+    </li>
+  </ol>
 </div> -->
 
 
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
 
-<!-- <div class="definicion-box">
-  <h1 class="title-practica">Definición (Medida de Lebesgue en $\mathbb{R}$ y conjuntos Lebesgue medibles)</h1>
-  
-  <p>La <strong>medida de Lebesgue</strong> (denotada comúnmente como $\lambda$ o $m$) es la forma estándar y rigurosa de asignar una "longitud", "área" o "volumen" a los subconjuntos del espacio euclidiano. En la recta real $\mathbb{R}$, su construcción formal se realiza en dos pasos fundamentales:</p>
+  <p>
+    Determina si cada uno de los siguientes argumentos constituye un
+    razonamiento lógico. Justifica tu respuesta. Si el argumento no es válido,
+    proporciona una asignación de valores de verdad para la cual todas las
+    premisas sean verdaderas y la conclusión sea falsa.
+  </p>
 
-  <p><strong>1. Medida Exterior de Lebesgue:</strong><br>
-  Para cualquier subconjunto arbitrario $A \subseteq \mathbb{R}$, la medida exterior $\lambda^*(A)$ se define como el ínfimo de las sumas de las longitudes de todas las sucesiones numerables de intervalos abiertos $\{(a_i, b_i)\}_{i=1}^{\infty}$ que cubren a $A$:</p>
+  <ol class="two-column">
+    <li>$p\to q,\qquad \neg q \qquad\therefore\qquad \neg p$
+    </li>
 
-  $$ \lambda^*(A) = \inf \left\{ \sum_{i=1}^{\infty} (b_i - a_i) : A \subseteq \bigcup_{i=1}^{\infty} (a_i, b_i) \right\} $$
+    <li>$p\to q,\qquad \neg p \qquad\therefore\qquad \neg q$
+    </li>
 
-  <p><strong>2. Conjuntos Lebesgue Medibles (Condición de Carathéodory):</strong><br>
-  Un conjunto $E \subseteq \mathbb{R}$ se dice que es <strong>Lebesgue medible</strong> si para todo $A \subseteq \mathbb{R}$ se satisface la siguiente condición:</p>
+    <li> $p\to q,\qquad q\to r \qquad\therefore\qquad p\to r$
+    </li>
 
-  $$ \lambda^*(A) = \lambda^*(A \cap E) + \lambda^*(A \cap E^c)  $$
+    <li>$p\to(q\lor r),\qquad \neg q \qquad\therefore\qquad p\to r$
+    </li>
 
-  <p>A la colección de todos los conjuntos que cumplen esta condición se le conoce como la <strong>$\sigma$-álgebra de Lebesgue</strong>, denotada por $\mathcal{L}$. Si un conjunto $E \in \mathcal{L}$, su <strong>medida de Lebesgue</strong> se define formalmente como su medida exterior:</p>
+    <li>$p\lor q,\qquad p\to r,\qquad q\to r \qquad\therefore\qquad r$
+    </li>
 
-  $$ \lambda(E) = \lambda^*(E) $$
-
-  <p><b>Propiedades Fundamentales:</b></p>
-  <ul>
-    <li><strong>Generalización de la longitud:</strong> Para cualquier intervalo con extremos $a \le b$, la medida de Lebesgue coincide con la longitud de intervalo correspondiente:
-      $\lambda([a, b]) = \lambda((a, b)) = b - a$.</li>
-    <li><strong>Invarianza bajo traslación:</strong> Si desplazamos un conjunto Lebesgue medible $E$ por una constante $x \in \mathbb{R}$, 
-      su medida de Lebesgue no cambia: $\lambda(E + x) = \lambda(E)$.</li>
-    <li><strong>Completitud:</strong> Todo subconjunto de un conjunto de medida Lebesgue cero también tiene medida cero y, por lo tanto, es medible.</li>
-  </ul>
+    <li> $p\to q,\qquad r\to s,\qquad p\lor r \qquad\therefore\qquad q\lor s$
+    </li>
+  </ol>
 </div>
- -->
+
+<!-- ========================================================= -->
+<!-- TEMA: REGLAS DE INFERENCIA -->
+<!-- ========================================================= -->
+
+<!-- <h1 class="tema-number-title">Reglas de inferencia</h1> -->
+
+
+<!-- <div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Obtén la conclusión e identifica la regla de inferencia
+    utilizada.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      $$p\to q,\qquad p\qquad\therefore\;?$$
+    </li>
+
+    <li>
+      $$p\to q,\qquad\neg q\qquad\therefore\;?$$
+    </li>
+
+    <li>
+      $$p\to q,\qquad q\to r\qquad\therefore\;?$$
+    </li>
+
+    <li>
+      $$p\lor q,\qquad\neg p\qquad\therefore\;?$$
+    </li>
+
+    <li>
+      $$p\land q\qquad\therefore\;?$$
+    </li>
+
+    <li>
+      $$p,\qquad q\qquad\therefore\;?$$
+    </li>
+  </ol>
+</div> -->
+<div class="ejercicio-box">
+  <h1 class="title-practica">Ejemplo resuelto</h1>
+
+  <p>
+    Construye una demostración formal que permita obtener la conclusión
+    a partir de las premisas dadas.
+  </p>
+
+  $$
+    \neg(p\lor q),\qquad r\to p
+    \qquad\therefore\qquad \neg r
+  $$
+
+  <button class="respButton hvr-grow"> Demostración </button>
+
+  <div class="resp-box flexbox">
+
+    <p>
+      Una posible demostración formal es la siguiente:
+    </p>
+
+    <p>
+      <span class="paso-numero">1</span>
+      $\neg(p\lor q)$
+      &nbsp;&nbsp; \\\ &nbsp;&nbsp;
+      Premisa.
+    </p>
+
+    <p>
+      <span class="paso-numero">2</span>
+      $r\to p$
+      &nbsp;&nbsp; \\\ &nbsp;&nbsp;
+      Premisa.
+    </p>
+
+    <p>
+      <span class="paso-numero">3</span>
+      $\neg p\land\neg q$
+      &nbsp;&nbsp; \\\ &nbsp;&nbsp;
+      Ley de De Morgan:
+      $\neg(p\lor q)\equiv\neg p\land\neg q$.
+    </p>
+
+    <p>
+      <span class="paso-numero">4</span>
+      $\neg p$
+      &nbsp;&nbsp; \\\ &nbsp;&nbsp;
+      Regla de inferencia:
+      $\neg p\land\neg q\;\therefore\;\neg p$.
+    </p>
+
+    <p>
+      <span class="paso-numero">5</span>
+      $\neg r$
+      &nbsp;&nbsp; \\\ &nbsp;&nbsp;
+      Modus Tollens:
+      $r\to p,\;\neg p\;\therefore\;\neg r$.
+    </p>
+
+    <!-- <p style="margin-top: 15px;">
+      En el paso 3 se utiliza la Ley de De Morgan para transformar la
+      primera premisa. A partir de $\neg p\land\neg q$, se obtiene
+      $\neg p$ mediante la Regla de Simplificación. Finalmente, las
+      proposiciones $r\to p$ y $\neg p$ permiten aplicar Modus Tollens
+      y concluir $\neg r$.
+    </p> -->
+
+  </div>
+</div>
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Construye una demostración formal para deducir la conclusión a partir de
+    las premisas dadas. Enumera cada paso de tu demostración y justifica 
+    explícitamente la regla de inferencia o la equivalencia lógica que aplicaste.
+  </p>
+
+  <ol class="two-column">
+    <li>
+      $p \to (q \land r),\qquad p \qquad \therefore r$
+    </li>
+
+    <li>
+      $\neg p \to q,\qquad \neg q,\qquad p \to r \qquad \therefore r$
+    </li>
+
+    <li>
+      $\neg(p \lor q),\qquad r \to p \qquad \therefore \neg r$
+    </li>
+
+    <li>
+      $p \to (q \to r),\qquad p,\qquad \neg r \qquad \therefore \neg q$
+    </li>
+
+    <li>
+      $p \to q,\qquad r \to s,\qquad p \lor r \qquad \therefore (q \lor s) \lor t$
+    </li>
+
+    <li>
+      $p \lor q,\qquad \neg p \lor r,\qquad \neg q \qquad \therefore r$
+    </li>
+  </ol>
+</div>
+
+<!-- ========================================================= -->
+<!-- TEMA: INFERENCIA CON CUANTIFICADORES -->
+<!-- ========================================================= -->
+
+<!-- <h1 class="tema-number-title">Inferencia con cuantificadores</h1> -->
+
+<!-- 
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Obtén la conclusión indicando las reglas utilizadas.
+  </p>
+
+  <ol>
+    <li>
+      $$\forall x\,[P(x)\to Q(x)],\qquad P(a).$$
+      Demuestra $Q(a)$.
+    </li>
+
+    <li>
+      $$\forall x\,[P(x)\to Q(x)],\qquad
+        \forall x\,[Q(x)\to R(x)],\qquad P(a).$$
+      Demuestra $R(a)$.
+    </li>
+
+    <li>
+      $$\forall x\,[P(x)\to Q(x)],\qquad\neg Q(a).$$
+      Demuestra $\neg P(a)$.
+    </li>
+
+    <li>
+      $$\forall n\in\mathbb{Z},
+        (4\mid n\to 2\mid n),\qquad 4\mid20.$$
+      Demuestra $2\mid20$.
+    </li>
+
+    <li>
+      $$\forall n\in\mathbb{Z},
+        (12\mid n\to6\mid n),$$
+      $$\forall n\in\mathbb{Z},
+        (6\mid n\to3\mid n),\qquad12\mid60.$$
+      Demuestra $3\mid60$.
+    </li>
+  </ol>
+</div> -->
+
+
+<!-- ========================================================= -->
+<!-- TEMA: PRIMERAS DEMOSTRACIONES -->
+<!-- ========================================================= -->
+
+<!-- <h1 class="tema-number-title">Primeras demostraciones</h1> -->
+
+
+<!-- <div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Demuestra directamente cada una de las siguientes afirmaciones utilizando
+    las definiciones de número par e impar.
+  </p>
+
+  <ol>
+    <li>
+      La suma de dos números enteros pares es par.
+    </li>
+
+    <li>
+      La suma de dos números enteros impares es par.
+    </li>
+
+    <li>
+      El producto de dos números enteros impares es impar.
+    </li>
+
+    <li>
+      Si $n$ es par, entonces $n^2$ es par.
+    </li>
+
+    <li>
+      Si $n$ es impar, entonces $n^2$ es impar.
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Demuestra las siguientes afirmaciones utilizando la definición de
+    divisibilidad.
+  </p>
+
+  <ol>
+    <li>
+      Si $a\mid b$ y $a\mid c$, entonces $a\mid(b+c)$.
+    </li>
+
+    <li>
+      Si $a\mid b$, entonces $a\mid kb$ para todo $k\in\mathbb{Z}$.
+    </li>
+
+    <li>
+      Si $a\mid b$ y $b\mid c$, entonces $a\mid c$.
+    </li>
+
+    <li>
+      Si $5\mid a$ y $5\mid b$, entonces $5\mid(2a+3b)$.
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Determina qué método de demostración parece más conveniente:
+    directa, contraposición,
+    contradicción o contraejemplo.
+    Después desarrolla la demostración.
+  </p>
+
+  <ol>
+    <li>
+      Si $n^2$ es par, entonces $n$ es par.
+    </li>
+
+    <li>
+      Si $n^2$ es impar, entonces $n$ es impar.
+    </li>
+
+    <li>
+      No existe un número natural mayor que todos los números naturales.
+    </li>
+
+    <li>
+      Todo número primo es impar.
+    </li>
+
+    <li>
+      Para todo $x\in\mathbb{R}$, $x^2\geq0$.
+    </li>
+  </ol>
+</div> -->
+
+
+<!-- ========================================================= -->
+<!-- TEMA: DEMOSTRACIONES CON CONJUNTOS -->
+<!-- ========================================================= -->
+
+<!-- <h1 class="tema-number-title">Demostraciones con conjuntos</h1> -->
+
+
+<!-- <div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Demuestra las siguientes afirmaciones utilizando un
+    elemento arbitrario.
+  </p>
+
+  <ol>
+    <li>
+      Si $A\subseteq B$ y $B\subseteq C$, entonces $A\subseteq C$.
+    </li>
+
+    <li>
+      $A\cap B\subseteq A$.
+    </li>
+
+    <li>
+      $A\subseteq A\cup B$.
+    </li>
+
+    <li>
+      $A\cap B\subseteq A\cup B$.
+    </li>
+
+    <li>
+      Si $A\subseteq B$, entonces $A\cap B=A$.
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Demuestra cada igualdad mediante doble inclusión.
+  </p>
+
+  <ol>
+    <li>
+      $$A\cap(B\cup C)=(A\cap B)\cup(A\cap C).$$
+    </li>
+
+    <li>
+      $$A\cup(B\cap C)=(A\cup B)\cap(A\cup C).$$
+    </li>
+
+    <li>
+      $$A\setminus(B\cup C)
+      =(A\setminus B)\cap(A\setminus C).$$
+    </li>
+  </ol>
+</div> -->
+
+
+<!-- ========================================================= -->
+<!-- TEMA: AXIOMA, LEMA, PROPOSICIÓN, TEOREMA Y COROLARIO -->
+<!-- ========================================================= -->
+
+<!-- <h1 class="tema-number-title">Resultados matemáticos</h1> -->
+<!-- 
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Relaciona cada concepto con la descripción que mejor corresponde:
+    axioma, lema,
+    proposición, teorema o
+    corolario.
+  </p>
+
+  <ol>
+    <li>
+      Resultado aceptado sin demostración como punto de partida de una teoría.
+    </li>
+
+    <li>
+      Resultado demostrado que se utiliza principalmente para facilitar
+      la demostración de otro resultado.
+    </li>
+
+    <li>
+      Resultado matemático demostrado de alcance específico o intermedio.
+    </li>
+
+    <li>
+      Resultado principal cuya verdad se establece mediante una demostración.
+    </li>
+
+    <li>
+      Consecuencia directa o casi inmediata de un resultado previamente demostrado.
+    </li>
+  </ol>
+</div>
+
+
+<div class="ejercicio-box">
+  <h1 class="number-title-practica">Ejercicio</h1>
+
+  <p>
+    Considera la siguiente cadena de resultados:
+  </p>
+
+  <p>
+    A. Si $n$ es impar, entonces $n^2$ es impar.
+  </p>
+
+  <p>
+    B. Si $n^2$ es par, entonces $n$ es par.
+  </p>
+
+  <p>
+    C. $\sqrt{2}$ es irracional.
+  </p>
+
+  <p>
+    D. La diagonal de un cuadrado de lado $1$ tiene
+    longitud irracional.
+  </p>
+
+  <ol>
+    <li>
+      ¿Cuál de los resultados podría utilizarse como lema para demostrar otro?
+    </li>
+
+    <li>
+      Si el resultado principal fuera la irracionalidad de $\sqrt{2}$,
+      ¿cuál llamarías teorema?
+    </li>
+
+    <li>
+      ¿Cuál puede considerarse un corolario del resultado principal?
+    </li>
+
+    <li>
+      Explica por qué la denominación ``lema'', ``teorema'' o ``corolario''
+      depende también de la función que el resultado desempeña en la exposición.
+    </li>
+  </ol>
+</div> -->
 
 <!-- Donde aparecerá la fecha de la última modificación -->
 <footer>

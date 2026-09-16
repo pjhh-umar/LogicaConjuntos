@@ -1683,3 +1683,16 @@ hr{
     width: 95%;
     margin: 30px auto; /* Espacio arriba y abajo de la línea */
   }
+
+
+  .paso-numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8em;
+  height: 1.8em;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  margin-right: 8px;
+  font-size: 0.9em;
+}
